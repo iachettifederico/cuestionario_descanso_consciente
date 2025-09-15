@@ -1,0 +1,101 @@
+---
+
+plugins:
+- rubocop-rails
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: false
+  ExtraDetails: false
+  Exclude:
+  - ".git/**/*"
+  - bin/**/*
+  - tmp/**/*
+  - db/**/*.rb
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Layout/LineLength:
+  Exclude:
+  - app/views/**/*
+  - app/components/**/*
+
+Lint/MissingSuper:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+  - app/views/**/*.rb
+  - app/components/**/*.rb
+  - db/migrate/**/*.rb
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Exclude:
+  - app/views/**/*.rb
+  - app/components/**/*.rb
+
+Metrics/MethodLength:
+  Exclude:
+  - app/views/**/*.rb
+  - app/components/**/*.rb
+
+Rails/Output:
+  Exclude:
+  - app/views/**/*.rb
+  - app/components/**/*.rb
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+Style/AccessorGrouping:
+  EnforcedStyle: separated
+
+Style/BlockDelimiters:
+  EnforcedStyle: semantic
+  Exclude:
+  - app/views/**/*
+  - app/components/**/*
+  BracesRequiredMethods:
+  - let
+  - let!
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  SafeAutoCorrect: true
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
+Style/KeywordParametersOrder:
+  Enabled: false
+
+Style/RedundantInitialize:
+  Exclude:
+  - app/views/**/*.rb
+  - app/components/**/*.rb
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrivialAccessors:
+  Enabled: false
