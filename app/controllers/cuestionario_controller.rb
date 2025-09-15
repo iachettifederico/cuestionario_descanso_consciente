@@ -9,6 +9,8 @@ class CuestionarioController < ApplicationController
     @categories = Category.ordered
     @answers = session[:questionnaire_answers] || {}
     @previous_category = find_previous_category
+    @next_category = find_next_category
+    @current_category_position = @category.position + 1
   end
 
   def submit
@@ -48,6 +50,12 @@ class CuestionarioController < ApplicationController
     return nil unless current_category
 
     Category.ordered.where(position: ...current_category.position).last
+  end
+
+  def find_next_category
+    return nil unless @category
+
+    Category.ordered.where("position > ?", @category.position).first
   end
 
   def all_questions_answered?(category)
