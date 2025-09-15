@@ -571,3 +571,47 @@ body .hover\:bg-gray-700:hover {
 .creator-info strong {
   color: #ffffff !important;
 }
+
+/* Developer Tools Styling */
+.developer-tools {
+  font-family: 'Simonetta', serif !important;
+  backdrop-filter: blur(10px);
+}
+
+.developer-tools * {
+  font-family: 'Simonetta', serif !important;
+}
+
+.developer-tools input[type="submit"],
+.developer-tools a {
+  font-family: 'Simonetta', serif !important;
+  font-weight: 500;
+  border: none !important;
+  text-decoration: none !important;
+  display: block;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.developer-tools input[type="submit"]:hover,
+.developer-tools a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Override any conflicting button styles for dev tools */
+.developer-tools .bg-yellow-400 {
+  background-color: #f59e0b !important;
+}
+
+.developer-tools .hover\:bg-yellow-500:hover {
+  background-color: #d97706 !important;
+}
+
+.developer-tools .bg-blue-400 {
+  background-color: #60a5fa !important;
+}
+
+.developer-tools .hover\:bg-blue-500:hover {
+  background-color: #3b82f6 !important;
+}

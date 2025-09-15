@@ -18,4 +18,12 @@ Rails.application.routes.draw do
   get "cuestionario/resultados", to: "cuestionario#resultados"
   get "cuestionario/:category_id", to: "cuestionario#show", as: :cuestionario_category
   post "cuestionario/:category_id", to: "cuestionario#submit"
+
+  # Developer tools (only in development)
+  if Rails.env.development?
+    post "cuestionario/dev/fill_random", to: "cuestionario#fill_random_answers"
+    post "cuestionario/dev/fill_random_current", to: "cuestionario#fill_random_current"
+    delete "cuestionario/dev/clear", to: "cuestionario#clear_session"
+    get "cuestionario/dev/show_results", to: "cuestionario#show_results_with_random"
+  end
 end
