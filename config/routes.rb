@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root to: redirect("/cuestionario")
-  get "cuestionario", to: "cuestionario#show"
+  get "cuestionario", to: "cuestionario#welcome"
+  get "cuestionario/comenzar", to: "cuestionario#show"
   get "cuestionario/formulario", to: "cuestionario#formulario"
   get "cuestionario/resultados", to: "cuestionario#resultados"
   get "cuestionario/:category_id", to: "cuestionario#show", as: :cuestionario_category

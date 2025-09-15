@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CuestionarioController < ApplicationController
+  def welcome
+  end
+
   def show
     @category = find_category
     @categories = Category.ordered
