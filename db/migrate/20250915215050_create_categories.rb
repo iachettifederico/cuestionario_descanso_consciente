@@ -5,6 +5,7 @@ class CreateCategories < ActiveRecord::Migration[8.0]
     create_table :categories do |t|
       t.string :name, null: false, limit: 100
       t.string :identifier, null: false, limit: 50
+      t.text :description
       t.integer :position, null: false, default: 0
 
       t.timestamps

@@ -1,4 +1,4 @@
-- id: physical
+- identifier: fisico
   name: Cansancio Físico
   questions:
   - ¿Te cuesta conciliar el sueño, incluso cuando estás muy cansado físicamente?
@@ -11,7 +11,7 @@
     que antes?
   - ¿Tu energía fluctúa a lo largo del día, sintiendo picos de fatiga en horarios
     específicos?
-- id: mental
+- identifier: mental
   name: Cansancio Mental
   questions:
   - ¿Te cuesta tomar decisiones simples, como qué comer o qué ponerte, porque sentís
@@ -24,7 +24,7 @@
   - ¿Te sentís desorganizado o como si tu mente estuviera siempre "en modo multitarea"?
   - ¿Tu capacidad de concentración disminuye notablemente cuando trabajás por más
     de una hora seguida?
-- id: emotional
+- identifier: emocional
   name: Cansancio Emocional
   questions:
   - ¿Sentís que estás al borde de una crisis emocional o de llorar sin motivo aparente?
@@ -37,7 +37,7 @@
     que no tenés energía emocional para ellos?
   - ¿Te irritás fácilmente o sentís que tu tolerancia a situaciones emocionales difíciles
     es baja?
-- id: sensory
+- identifier: sensorial
   name: Cansancio Sensorial
   questions:
   - ¿Notás que te agobian las luces brillantes, los ruidos fuertes o el contacto físico
@@ -51,7 +51,7 @@
     estimulación sensorial?
   - ¿Sentís la necesidad de escapar o aislarte después de eventos llenos de estímulos
     (conciertos, fiestas, centros comerciales)?
-- id: social
+- identifier: social
   name: Cansancio Social
   questions:
   - ¿Preferís pasar tiempo a solas, incluso con personas cercanas, porque te sentís
@@ -66,7 +66,7 @@
     ganas de profundizar en temas importantes?
   - ¿Te cuesta recargar energías luego de pasar tiempo en eventos sociales, incluso
     cuando te divertís?
-- id: spiritual
+- identifier: espiritual
   name: Cansancio Espiritual
   questions:
   - ¿Sentís que estás buscando un propósito o significado más profundo en tu vida,
@@ -79,7 +79,7 @@
   - ¿Te encontrás cuestionando el sentido de las cosas que antes te parecían claras?
   - ¿Te sentís espiritualmente estancado o desconectado, aunque busqués momentos de
     calma o meditación?
-- id: creative
+- identifier: creativo
   name: Cansancio Creativo
   questions:
   - ¿Te cuesta generar ideas nuevas o soluciones creativas en áreas que solían fluir
