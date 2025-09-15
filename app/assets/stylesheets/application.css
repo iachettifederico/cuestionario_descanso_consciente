@@ -27,6 +27,7 @@ body {
 /* Color System - Text Colors */
 .text-coral { color: #ec8d8c; }
 .text-green { color: #84a16b; }
+.text-green-dark { color: #5a7a41; }
 .text-dark { color: #3a3a3a; }
 .text-medium { color: #666666; }
 .text-light { color: #888888; }
@@ -70,22 +71,42 @@ body {
   font-size: 24px;
 }
 
-/* Primary Result Section Styling */
-.primary-result * {
+/* Primary Result Section Styling - Dark text on coral background for better contrast */
+.primary-result {
+  color: #5a2a2a !important;
+}
+
+.primary-result p,
+.primary-result h3,
+.primary-result h4 {
   color: #5a2a2a !important;
   font-weight: 900 !important;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* But keep the white box content white */
+.primary-result .bg-white {
+  color: #5a2a2a !important;
+}
+
+.primary-result .bg-white p {
+  color: #5a2a2a !important;
 }
 
 .primary-result::before {
   content: '';
 }
 
-/* Creator Info Section Styling */
-.creator-info * {
+/* Creator Info Section Styling - More specific targeting */
+.creator-info p {
   color: #4a5c32 !important;
   font-weight: 900 !important;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.creator-info strong {
+  color: #4a5c32 !important;
+  font-weight: 900 !important;
 }
 
 /* Important Note Decoration */
@@ -111,4 +132,442 @@ body {
 
 .progress-bar.high {
   background: linear-gradient(90deg, #f8afae, #ec8d8c);
+}
+
+/* Additional Container & Interactive Styles */
+.question-item {
+  transition: all 0.3s ease;
+}
+
+.question-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Radio button custom styling */
+input[type="radio"] {
+  accent-color: #ec8d8c;
+}
+
+/* Enhanced shadow effects for containers */
+.shadow-container {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Form container styling specific improvements */
+.form-container {
+  background: linear-gradient(145deg, #fefefe 0%, #f7f5f3 100%);
+  border: 2px solid #f7f5f3;
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Global overrides for any questionnaire page layout */
+body .bg-gray-50 {
+  background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%) !important;
+}
+
+body .text-gray-800 {
+  color: #3a3a3a !important;
+}
+
+body .text-gray-700 {
+  color: #666666 !important;
+}
+
+body .text-gray-600 {
+  color: #888888 !important;
+}
+
+body .text-red-400,
+body .text-red-600 {
+  color: #ec8d8c !important;
+}
+
+body .text-green-600,
+body .text-green-800 {
+  color: #84a16b !important;
+}
+
+body .text-green-700 {
+  color: #84a16b !important;
+}
+
+body .bg-red-400,
+body .bg-red-500 {
+  background-color: #ec8d8c !important;
+}
+
+body .bg-green-50 {
+  background-color: rgba(168, 197, 152, 0.1) !important;
+  border: 2px solid #a8c598 !important;
+}
+
+body .bg-white {
+  background-color: #fefefe !important;
+}
+
+body .border-stone-100 {
+  border-color: #f7f5f3 !important;
+}
+
+body .bg-gradient-to-br {
+  background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%) !important;
+}
+
+body .from-stone-50 {
+  --tw-gradient-from: #f7f5f3 !important;
+}
+
+body .to-stone-100 {
+  --tw-gradient-to: #fefefe !important;
+}
+
+body .from-red-100\/30 {
+  --tw-gradient-from: rgba(248, 175, 174, 0.2) !important;
+}
+
+body .shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body .rounded-2xl {
+  border-radius: 1.5rem !important;
+}
+
+/* Override progress bar colors globally */
+body .bg-red-500 {
+  background-color: #ec8d8c !important;
+}
+
+body .bg-gray-200 {
+  background-color: #f7f5f3 !important;
+}
+
+body .bg-gray-300 {
+  background-color: #d0d0d0 !important;
+}
+
+/* Ensure consistent container styling across all questionnaire formats */
+.questionnaire-container {
+  background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%);
+  min-height: 100vh;
+  color: #3a3a3a;
+  font-family: 'Simonetta', serif;
+}
+
+.questionnaire-main-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: #fefefe;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  border-radius: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #f7f5f3;
+}
+
+@media (min-width: 768px) {
+  .questionnaire-main-container {
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Additional global style overrides for any questionnaire format */
+
+/* Override Tailwind utility classes with our color system */
+body .bg-blue-500,
+body .bg-blue-600 {
+  background-color: #ec8d8c !important;
+}
+
+body .hover\:bg-blue-600:hover {
+  background-color: rgba(236, 141, 140, 0.9) !important;
+}
+
+body .bg-green-500 {
+  background-color: #84a16b !important;
+}
+
+body .hover\:bg-red-500:hover {
+  background-color: rgba(236, 141, 140, 0.9) !important;
+}
+
+body .focus\:ring-red-300:focus {
+  --tw-ring-color: rgba(236, 141, 140, 0.3) !important;
+}
+
+/* Progress bar global styling */
+body .bg-red-500,
+body .bg-red-400 {
+  background: linear-gradient(90deg, #f8afae, #ec8d8c) !important;
+}
+
+/* Button hover effects */
+body .hover\:bg-red-500:hover,
+body .hover\:bg-red-400:hover {
+  background: rgba(236, 141, 140, 0.9) !important;
+}
+
+/* Global container improvements for any layout */
+body main.container {
+  background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%) !important;
+  min-height: 100vh;
+  margin-top: 0 !important;
+  padding-top: 2rem;
+}
+
+/* Ensure all forms and containers use consistent styling */
+body .rounded-lg {
+  border-radius: 0.75rem !important;
+}
+
+body .rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+body .rounded-2xl {
+  border-radius: 1.5rem !important;
+}
+
+body .rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+/* Override any development menu styling */
+body .fixed.bottom-4.right-4 {
+  background-color: #fefefe !important;
+  border: 2px solid #f7f5f3 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+body .bg-blue-100 {
+  background-color: rgba(168, 197, 152, 0.2) !important;
+}
+
+body .hover\:bg-blue-200:hover {
+  background-color: rgba(168, 197, 152, 0.3) !important;
+}
+
+body .bg-red-100 {
+  background-color: rgba(248, 175, 174, 0.3) !important;
+}
+
+body .hover\:bg-red-200:hover {
+  background-color: rgba(248, 175, 174, 0.4) !important;
+}
+
+/* Global font family override */
+body * {
+  font-family: 'Simonetta', serif !important;
+}
+
+/* Global decorative elements */
+.questionnaire-decoration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background: radial-gradient(circle, rgba(248, 175, 174, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Enhanced shadow system */
+body .shadow-sm {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+body .shadow-md {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+body .shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+}
+
+body .shadow-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+body .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Cuestionario App Body Styling */
+body.cuestionario-app {
+  font-family: 'Simonetta', serif !important;
+  background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%) !important;
+  color: #3a3a3a !important;
+  line-height: 1.6;
+}
+
+body.cuestionario-app main.container {
+  background: transparent !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 2rem 1rem !important;
+}
+
+/* Apply styling to any main container within the questionnaire app */
+body.cuestionario-app .max-w-4xl,
+body.cuestionario-app .max-w-5xl,
+body.cuestionario-app .max-w-6xl {
+  background-color: #fefefe !important;
+  border: 2px solid #f7f5f3 !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add decorative background to containers */
+body.cuestionario-app .max-w-4xl::before,
+body.cuestionario-app .max-w-5xl::before,
+body.cuestionario-app .max-w-6xl::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background: radial-gradient(circle, rgba(248, 175, 174, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content is above decoration */
+body.cuestionario-app .relative {
+  z-index: 10;
+}
+
+/* Final override rules for complete consistency - More specific to avoid collisions */
+
+/* Force our color system on any questionnaire page - avoiding broad overrides */
+body .text-red-400,
+body .text-red-600 {
+  color: #ec8d8c !important;
+}
+
+body .bg-red-400,
+body .bg-red-500 {
+  background-color: #ec8d8c !important;
+}
+
+/* Be more specific with green colors to avoid conflicts */
+body .text-green-600,
+body .text-green-800 {
+  color: #84a16b !important;
+}
+
+body .text-green-700 {
+  color: #84a16b !important;
+}
+
+/* Only override specific gray classes */
+body .text-gray-800 {
+  color: #3a3a3a !important;
+}
+
+body .text-gray-700 {
+  color: #666666 !important;
+}
+
+body .text-gray-600 {
+  color: #888888 !important;
+}
+
+body .border-gray-200,
+body .border-stone-100 {
+  border-color: #f7f5f3 !important;
+}
+
+/* Ensure all buttons have consistent styling */
+body button,
+body input[type="submit"],
+body .btn,
+body a[class*="bg-"] {
+  border-radius: 0.75rem !important;
+  font-family: 'Simonetta', serif !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Make sure any form elements match our design */
+body input[type="radio"] {
+  accent-color: #ec8d8c !important;
+}
+
+body label {
+  font-family: 'Simonetta', serif !important;
+  color: #666666 !important;
+}
+
+/* Fix specific contrast issues */
+
+/* Green description blocks - ensure proper text contrast */
+.category-description .text-green-dark {
+  color: #5a7a41 !important; /* Darker green for better contrast on light background */
+}
+
+.category-description h3,
+.category-description p {
+  color: #5a7a41 !important;
+}
+
+/* Back buttons - ensure proper background colors */
+.bg-green-light {
+  background-color: #a8c598 !important;
+}
+
+.hover\:bg-green:hover {
+  background-color: #84a16b !important;
+}
+
+/* White text should stay white */
+body .text-white {
+  color: #ffffff !important;
+}
+
+/* Green badges should have proper green background */
+body .bg-green-light.text-white {
+  background-color: #a8c598 !important;
+  color: #ffffff !important;
+}
+
+/* Gray buttons background */
+body .bg-gray-600 {
+  background-color: #4a5568 !important;
+}
+
+body .hover\:bg-gray-700:hover {
+  background-color: #2d3748 !important;
+}
+
+/* Creator info background should remain green gradient */
+.bg-gradient-green {
+  background: linear-gradient(135deg, #a8c598 0%, #84a16b 100%) !important;
+}
+
+/* Ensure creator info text is visible on green background */
+.creator-info {
+  color: #ffffff !important;
+}
+
+.creator-info p,
+.creator-info strong {
+  color: #ffffff !important;
 }

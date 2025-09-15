@@ -1,19 +1,19 @@
-<div class="bg-gradient-to-br from-stone-50 to-stone-100 min-h-screen text-gray-800 leading-relaxed font-['Simonetta']">
-  <div class="max-w-4xl mx-auto p-4 md:p-8 bg-white shadow-xl rounded-2xl my-4 md:my-8 relative overflow-hidden">
+<div class="bg-gradient-cream min-h-screen text-dark leading-relaxed">
+  <div class="max-w-4xl mx-auto p-4 md:p-8 bg-warm-white shadow-2xl rounded-3xl my-4 md:my-8 relative overflow-hidden border-2 border-cream">
     <!-- Subtle background decoration -->
-    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-100/30 to-transparent rounded-full -translate-y-32 translate-x-32 pointer-events-none"></div>
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-coral-light/20 to-transparent rounded-full -translate-y-32 translate-x-32 pointer-events-none"></div>
 
     <div class="relative z-10">
       <!-- Header -->
-      <div class="text-center mb-8">
-        <h1 class="text-5xl md:text-6xl font-bold text-red-400 mb-2 drop-shadow-sm">Descanso Consciente</h1>
-        <h2 class="text-2xl md:text-3xl text-green-600 mb-4 font-normal">CUESTIONARIO</h2>
+      <div class="text-center mb-8 pb-6 border-b-2 border-green-light relative">
+        <h1 class="text-5xl md:text-6xl font-bold text-coral mb-2 drop-shadow-sm">Descanso Consciente</h1>
+        <h2 class="text-2xl md:text-3xl text-green mb-4 font-normal">CUESTIONARIO</h2>
         <div class="text-4xl">🌸</div>
       </div>
 
       <!-- Flash alerts -->
       <% if flash[:alert] %>
-        <div class="bg-red-100 border-2 border-red-300 text-red-700 px-6 py-4 rounded-xl mb-6">
+        <div class="bg-coral-light border-2 border-coral text-white px-6 py-4 rounded-xl mb-6">
           <%= flash[:alert] %>
         </div>
       <% end %>
@@ -21,14 +21,14 @@
       <!-- Progress section -->
       <div class="p-6 mb-6">
         <div class="flex justify-between items-center mb-4">
-          <div class="text-lg md:text-xl font-bold text-gray-800">
+          <div class="text-lg md:text-xl font-bold text-dark">
             <span>Evaluando: </span>
-            <span class="text-red-600"><%= @category.name %></span>
+            <span class="text-coral"><%= @category.name %></span>
           </div>
         </div>
 
         <!-- Category progress indicator -->
-        <div class="flex justify-center text-sm font-semibold text-gray-700 mb-4">
+        <div class="flex justify-center text-sm font-semibold text-medium mb-4">
           <span>Categoría <%= @current_category_position %> de 7</span>
         </div>
       </div>
@@ -36,15 +36,15 @@
       <%= form_with url: cuestionario_category_path(@category), method: :post, local: true, class: "space-y-6" do |form| %>
         <!-- Category section -->
         <div class="category-section mb-8">
-          <div class="bg-green-50 p-6 rounded-2xl mb-6 text-center">
-            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-green-800"><%= @category.name %></h3>
-            <p class="text-sm md:text-base text-green-700 mb-4">
+          <div class="bg-green-light/10 border-2 border-green-light p-6 rounded-3xl mb-6 text-center shadow-md category-description">
+            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-green-dark"><%= @category.name %></h3>
+            <p class="text-sm md:text-base text-medium mb-4">
               <%= @category.description %>
             </p>
-            <p class="text-base md:text-lg text-green-700 font-medium">
+            <p class="text-base md:text-lg text-green-dark font-medium">
               Respondé a las siguientes preguntas en una escala del 0 al 3:
             </p>
-            <div class="text-sm text-green-600 mt-2">
+            <div class="text-sm text-green-dark mt-2">
               <div>0: Nunca</div>
               <div>1: A veces</div>
               <div>2: Frecuentemente</div>
@@ -54,12 +54,12 @@
 
           <!-- Questions -->
           <% @category.questions.each_with_index do |question, index| %>
-            <div class="question-item bg-white border-2 border-stone-100 rounded-2xl p-6 mb-4 shadow-sm hover:shadow-md hover:border-red-200 transition-all duration-300 relative">
-              <div class="absolute -top-3 left-6 bg-red-400 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">
+            <div class="question-item bg-warm-white border-2 border-cream rounded-3xl p-6 mb-4 shadow-md hover:shadow-xl hover:border-coral-light transition-all duration-300 relative">
+              <div class="absolute -top-3 left-6 bg-coral text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">
                 <%= index + 1 %>
               </div>
 
-              <div class="text-lg md:text-xl mb-4 text-gray-800 leading-relaxed mt-2">
+              <div class="text-lg md:text-xl mb-4 text-dark leading-relaxed mt-2">
                 <%= question.text %>
               </div>
 
@@ -67,34 +67,34 @@
               <div class="flex flex-wrap gap-4 justify-center">
                 <div class="flex items-center gap-2">
                   <%= radio_button_tag "answers[#{question.id}]", 0, @answers[question.id.to_s] == 0, 
-                      class: "w-4 h-4 text-red-400 focus:ring-red-300", 
+                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
                       id: "question_#{question.id}_0" %>
                   <%= label_tag "question_#{question.id}_0", "0: Nunca", 
-                      class: "text-sm md:text-base text-gray-700 cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer" %>
                 </div>
 
                 <div class="flex items-center gap-2">
                   <%= radio_button_tag "answers[#{question.id}]", 1, @answers[question.id.to_s] == 1, 
-                      class: "w-4 h-4 text-red-400 focus:ring-red-300", 
+                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
                       id: "question_#{question.id}_1" %>
                   <%= label_tag "question_#{question.id}_1", "1: A veces", 
-                      class: "text-sm md:text-base text-gray-700 cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer" %>
                 </div>
 
                 <div class="flex items-center gap-2">
                   <%= radio_button_tag "answers[#{question.id}]", 2, @answers[question.id.to_s] == 2, 
-                      class: "w-4 h-4 text-red-400 focus:ring-red-300", 
+                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
                       id: "question_#{question.id}_2" %>
                   <%= label_tag "question_#{question.id}_2", "2: Frecuentemente", 
-                      class: "text-sm md:text-base text-gray-700 cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer" %>
                 </div>
 
                 <div class="flex items-center gap-2">
                   <%= radio_button_tag "answers[#{question.id}]", 3, @answers[question.id.to_s] == 3, 
-                      class: "w-4 h-4 text-red-400 focus:ring-red-300", 
+                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
                       id: "question_#{question.id}_3" %>
                   <%= label_tag "question_#{question.id}_3", "3: Siempre", 
-                      class: "text-sm md:text-base text-gray-700 cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer" %>
                 </div>
               </div>
             </div>
@@ -102,10 +102,10 @@
         </div>
 
         <!-- Navigation buttons -->
-        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-cream">
           <% if @previous_category %>
             <%= link_to cuestionario_category_path(@previous_category.identifier), 
-                class: "px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-400 transition-colors duration-200" do %>
+                class: "px-6 py-3 bg-green-light text-white rounded-xl font-medium text-sm hover:bg-green transition-colors duration-200 shadow-md" do %>
               ← Categoría Anterior
             <% end %>
           <% else %>
@@ -113,7 +113,7 @@
           <% end %>
           
           <%= form.submit @next_category ? "Siguiente Categoría →" : "Ver Resultados →", 
-              class: "px-6 py-3 bg-red-400 text-white rounded-lg font-medium text-sm hover:bg-red-500 transition-colors duration-200" %>
+              class: "px-6 py-3 bg-coral text-white rounded-xl font-medium text-sm hover:bg-coral/90 transition-colors duration-200 shadow-md" %>
         </div>
       <% end %>
     </div>
