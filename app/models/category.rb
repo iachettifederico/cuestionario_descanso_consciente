@@ -8,4 +8,8 @@ class Category < ApplicationRecord
   validates :position, presence: true
 
   scope :ordered, -> { order(:position) }
+
+  def to_param
+    identifier
+  end
 end

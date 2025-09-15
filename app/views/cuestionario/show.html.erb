@@ -1,1 +1,43 @@
-<h1>Cuestionario de Descanso Consciente</h1>
+<div class="max-w-4xl mx-auto p-6">
+  <h1 class="text-2xl font-bold mb-6">Cuestionario de Descanso Consciente</h1>
+
+  <% if flash[:alert] %>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+  <h2 class="text-xl mb-4"><%= @category.name %></h2>
+
+  <%= form_with url: cuestionario_category_path(@category), method: :post, local: true, class: "space-y-6" do |form| %>
+    <% @category.questions.each do |question| %>
+      <div class="border-b pb-4">
+        <p class="mb-3 font-medium"><%= question.text %></p>
+        
+        <div class="space-y-2">
+          <div>
+            <%= radio_button_tag "answers[#{question.id}]", 0, @answers[question.id.to_s] == 0, class: "mr-2" %>
+            <%= label_tag "answers_#{question.id}_0", "Nunca" %>
+          </div>
+          
+          <div>
+            <%= radio_button_tag "answers[#{question.id}]", 1, @answers[question.id.to_s] == 1, class: "mr-2" %>
+            <%= label_tag "answers_#{question.id}_1", "A veces" %>
+          </div>
+          
+          <div>
+            <%= radio_button_tag "answers[#{question.id}]", 2, @answers[question.id.to_s] == 2, class: "mr-2" %>
+            <%= label_tag "answers_#{question.id}_2", "Frecuentemente" %>
+          </div>
+          
+          <div>
+            <%= radio_button_tag "answers[#{question.id}]", 3, @answers[question.id.to_s] == 3, class: "mr-2" %>
+            <%= label_tag "answers_#{question.id}_3", "Siempre" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    
+    <%= form.submit "Continuar", class: "bg-blue-500 text-white px-6 py-2 rounded mt-6" %>
+  <% end %>
+</div>
