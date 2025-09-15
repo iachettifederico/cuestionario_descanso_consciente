@@ -9,13 +9,16 @@ require "yaml"
 # Load tiredness questionnaire data
 questionnaire_data = YAML.load_file(Rails.root.join("docs/cansancios.yml"))
 
-questionnaire_data.each do |category_data|
+questionnaire_data.each_with_index do |category_data, category_index|
   category = Category.find_or_create_by!(identifier: category_data["id"]) { |c|
     c.name = category_data["name"]
+    c.position = category_index
   }
 
-  category_data["questions"].each do |question_text|
-    category.questions.find_or_create_by!(text: question_text)
+  category_data["questions"].each_with_index do |question_text, question_index|
+    category.questions.find_or_create_by!(text: question_text) do |q|
+      q.position = question_index
+    end
   end
 end
 

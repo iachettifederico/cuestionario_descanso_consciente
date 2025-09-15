@@ -14,17 +14,21 @@ ActiveRecord::Schema[8.0].define(version: 2025_09_15_164901) do
   create_table "categories", force: :cascade do |t|
     t.string "name", limit: 100, null: false
     t.string "identifier", limit: 50, null: false
+    t.integer "position", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["identifier"], name: "index_categories_on_identifier", unique: true
+    t.index ["position"], name: "index_categories_on_position"
   end
 
   create_table "questions", force: :cascade do |t|
     t.text "text", null: false
     t.integer "category_id", null: false
+    t.integer "position", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_questions_on_category_id"
+    t.index ["position"], name: "index_questions_on_position"
   end
 
   add_foreign_key "questions", "categories"
