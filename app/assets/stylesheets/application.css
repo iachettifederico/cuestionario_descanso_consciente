@@ -8,3 +8,107 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+/* ===== QUESTIONNAIRE APPLICATION STYLES ===== */
+
+/* Base Typography */
+body {
+  font-family: 'Simonetta', serif;
+}
+
+/* Color System - Background Colors */
+.bg-coral { background-color: #ec8d8c; }
+.bg-coral-light { background-color: #f8afae; }
+.bg-green { background-color: #84a16b; }
+.bg-green-light { background-color: #a8c598; }
+.bg-cream { background-color: #f7f5f3; }
+.bg-warm-white { background-color: #fefefe; }
+
+/* Color System - Text Colors */
+.text-coral { color: #ec8d8c; }
+.text-green { color: #84a16b; }
+.text-dark { color: #3a3a3a; }
+.text-medium { color: #666666; }
+.text-light { color: #888888; }
+
+/* Color System - Border Colors */
+.border-coral { border-color: #ec8d8c; }
+.border-coral-light { border-color: #f8afae; }
+.border-green { border-color: #84a16b; }
+.border-green-light { border-color: #a8c598; }
+.border-cream { border-color: #f7f5f3; }
+.border-yellow { border-color: #f4cf82; }
+
+/* Gradient Backgrounds */
+.bg-gradient-coral { background: linear-gradient(135deg, #f8afae 0%, #ec8d8c 100%); }
+.bg-gradient-green { background: linear-gradient(135deg, #a8c598 0%, #84a16b 100%); }
+.bg-gradient-cream { background: linear-gradient(135deg, #f7f5f3 0%, #fefefe 100%); }
+.bg-gradient-blue { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); }
+
+/* Results Container Background Effect */
+.results-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(132, 161, 107, 0.05) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Header Decoration */
+.header::after {
+  content: '✨';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fefefe;
+  padding: 0 15px;
+  font-size: 24px;
+}
+
+/* Primary Result Section Styling */
+.primary-result * {
+  color: #5a2a2a !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.primary-result::before {
+  content: '';
+}
+
+/* Creator Info Section Styling */
+.creator-info * {
+  color: #4a5c32 !important;
+  font-weight: 900 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Important Note Decoration */
+.important-note::before {
+  content: '💙';
+  position: absolute;
+  top: -15px;
+  left: 30px;
+  background: #fefefe;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+/* Progress Bar Styling */
+.progress-bar.good {
+  background: linear-gradient(90deg, #a8c598, #84a16b);
+}
+
+.progress-bar.moderate {
+  background: linear-gradient(90deg, #f4cf82, #e6b800);
+}
+
+.progress-bar.high {
+  background: linear-gradient(90deg, #f8afae, #ec8d8c);
+}
