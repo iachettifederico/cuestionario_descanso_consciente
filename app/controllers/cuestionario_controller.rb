@@ -33,6 +33,67 @@ class CuestionarioController < ApplicationController
     @predominant_tiredness = find_predominant_tiredness
   end
 
+  # Developer tools methods (only available in development)
+  def fill_random_answers
+    return head :not_found unless Rails.env.development?
+
+    session[:questionnaire_answers] = {}
+    Question.all.each do |question|
+      session[:questionnaire_answers][question.id.to_s] = rand(0..3)
+    end
+
+    flash[:notice] = "🎲 Todas las preguntas completadas con valores aleatorios"
+    redirect_back(fallback_location: "/cuestionario")
+  end
+
+  def fill_random_current
+    return head :not_found unless Rails.env.development?
+
+    # Use the category_id from the form params if provided
+    category = if params[:category_id].present?
+                 Category.find_by!(identifier: params[:category_id])
+               else
+                 find_category
+               end
+
+    session[:questionnaire_answers] ||= {}
+
+    filled_count = 0
+    category.questions.each do |question|
+      session[:questionnaire_answers][question.id.to_s] = rand(0..3)
+      filled_count += 1
+    end
+
+    flash[:notice] = "🎲 #{category.name} completada (#{filled_count} preguntas)"
+
+    # Try to redirect to the same category page if we have the identifier
+    if params[:category_id].present?
+      redirect_to cuestionario_category_path(params[:category_id])
+    else
+      redirect_back(fallback_location: "/cuestionario")
+    end
+  end
+
+  def clear_session
+    return head :not_found unless Rails.env.development?
+
+    session[:questionnaire_answers] = {}
+    flash[:notice] = "🗑️ Sesión limpiada exitosamente"
+    redirect_back(fallback_location: "/cuestionario")
+  end
+
+  def show_results_with_random
+    return head :not_found unless Rails.env.development?
+
+    # Fill any missing answers with random values
+    session[:questionnaire_answers] ||= {}
+    Question.all.each do |question|
+      session[:questionnaire_answers][question.id.to_s] ||= rand(0..3)
+    end
+
+    redirect_to "/cuestionario/resultados"
+  end
+
   private
 
   def find_category
@@ -105,66 +166,5 @@ class CuestionarioController < ApplicationController
 
     category_id = @category_scores.key(max_score)
     @categories.find { |category| category.id == category_id }
-  end
-
-  # Developer tools methods (only available in development)
-  def fill_random_answers
-    return head :not_found unless Rails.env.development?
-
-    session[:questionnaire_answers] = {}
-    Question.all.each do |question|
-      session[:questionnaire_answers][question.id.to_s] = rand(0..3)
-    end
-
-    flash[:notice] = "🎲 Todas las preguntas completadas con valores aleatorios"
-    redirect_back(fallback_location: "/cuestionario")
-  end
-
-  def fill_random_current
-    return head :not_found unless Rails.env.development?
-
-    # Use the category_id from the form params if provided
-    category = if params[:category_id].present?
-                 Category.find_by!(identifier: params[:category_id])
-               else
-                 find_category
-               end
-
-    session[:questionnaire_answers] ||= {}
-
-    filled_count = 0
-    category.questions.each do |question|
-      session[:questionnaire_answers][question.id.to_s] = rand(0..3)
-      filled_count += 1
-    end
-
-    flash[:notice] = "🎲 #{category.name} completada (#{filled_count} preguntas)"
-
-    # Try to redirect to the same category page if we have the identifier
-    if params[:category_id].present?
-      redirect_to cuestionario_category_path(params[:category_id])
-    else
-      redirect_back(fallback_location: "/cuestionario")
-    end
-  end
-
-  def clear_session
-    return head :not_found unless Rails.env.development?
-
-    session[:questionnaire_answers] = {}
-    flash[:notice] = "🗑️ Sesión limpiada exitosamente"
-    redirect_back(fallback_location: "/cuestionario")
-  end
-
-  def show_results_with_random
-    return head :not_found unless Rails.env.development?
-
-    # Fill any missing answers with random values
-    session[:questionnaire_answers] ||= {}
-    Question.all.each do |question|
-      session[:questionnaire_answers][question.id.to_s] ||= rand(0..3)
-    end
-
-    redirect_to "/cuestionario/resultados"
   end
 end
