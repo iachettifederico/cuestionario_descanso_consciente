@@ -83,7 +83,7 @@
         <h3 class="text-3xl md:text-5xl text-center text-dark mb-8 font-bold">Resultados Detallados</h3>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          <% @categories.order(:position).each do |category| %>
+          <% @categories.sort_by { |category| -@category_scores[category.id] }.each do |category| %>
             <% score = @category_scores[category.id] %>
             <% max_score = 18 %>
             <% percentage = (score.to_f / max_score * 100).round %>
