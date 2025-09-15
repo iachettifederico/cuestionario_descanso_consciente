@@ -1,11 +1,22 @@
 <div class="max-w-4xl mx-auto p-6">
   <h1 class="text-2xl font-bold mb-6">Resultados del Cuestionario</h1>
   
+  <% if @predominant_tiredness %>
+    <div class="mb-8 p-6 bg-green-50 border-2 border-green-200 rounded">
+      <h2 class="text-xl font-semibold mb-2">Cansancio Predominante</h2>
+      <p class="text-lg"><strong><%= @predominant_tiredness.name %></strong></p>
+      <p class="text-sm text-gray-600 mt-1">Puntuación: <%= @category_scores[@predominant_tiredness.id] %> puntos</p>
+    </div>
+  <% end %>
+
   <div class="mb-8 p-4 bg-blue-50 rounded">
     <h2 class="text-xl font-semibold mb-4">Puntuaciones por Categoría</h2>
     <% @categories.each do |category| %>
-      <div class="mb-2">
+      <div class="mb-2 <%= 'font-bold text-green-700' if @predominant_tiredness&.id == category.id %>">
         <strong><%= category.name %>:</strong> <%= @category_scores[category.id] %> puntos
+        <% if @predominant_tiredness&.id == category.id %>
+          <span class="text-green-600">(Predominante)</span>
+        <% end %>
       </div>
     <% end %>
   </div>

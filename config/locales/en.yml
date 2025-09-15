@@ -29,3 +29,6 @@
 
 en:
   hello: "Hello world"
+  questionnaire:
+    validation:
+      all_questions_required: "Por favor responde todas las preguntas antes de continuar"

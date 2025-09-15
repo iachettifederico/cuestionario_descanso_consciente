@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Category < ApplicationRecord
-  has_many :questions, -> { order(:position) }, dependent: :destroy
+  has_many :questions, -> { order(:position) }, dependent: :destroy, inverse_of: :category
 
   validates :name, presence: true
   validates :identifier, presence: true, uniqueness: true
