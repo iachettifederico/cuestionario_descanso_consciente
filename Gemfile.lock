@@ -416,7 +416,7 @@ DEPENDENCIES
   pry-rails (~> 0.3.11)
   puma (~> 7.0.3)
   rails (~> 8.0.2.1)
-  rspec-rails
+  rspec-rails (~> 8.0.2)
   rubocop (~> 1.80.2)
   rubocop-rails (~> 2.33.3)
   selenium-webdriver (~> 4.35.0)
