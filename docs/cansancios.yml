@@ -1,0 +1,94 @@
+- id: physical
+  name: Cansancio Físico
+  questions:
+  - ¿Te cuesta conciliar el sueño, incluso cuando estás muy cansado físicamente?
+  - ¿Sentís que tu cuerpo está constantemente en tensión, incluso en momentos de descanso?
+  - ¿Te falta motivación para hacer ejercicio o mover tu cuerpo, a pesar de que sabés
+    que te beneficiaría?
+  - ¿Te despiertas durante la noche sintiendo que no podés encontrar una postura cómoda
+    para descansar?
+  - ¿Notás que te cuesta mucho más recuperarte después de realizar actividad física
+    que antes?
+  - ¿Tu energía fluctúa a lo largo del día, sintiendo picos de fatiga en horarios
+    específicos?
+- id: mental
+  name: Cansancio Mental
+  questions:
+  - ¿Te cuesta tomar decisiones simples, como qué comer o qué ponerte, porque sentís
+    que tu mente está sobrecargada?
+  - ¿Te sorprendés perdiendo el hilo de tus propios pensamientos o conversaciones?
+  - ¿Te resulta difícil mantener la calma cuando las cosas no salen como esperabas,
+    porque te sentís mentalmente saturado?
+  - ¿Te ves procrastinando tareas porque te sentís incapaz de enfocarte lo suficiente
+    para completarlas?
+  - ¿Te sentís desorganizado o como si tu mente estuviera siempre "en modo multitarea"?
+  - ¿Tu capacidad de concentración disminuye notablemente cuando trabajás por más
+    de una hora seguida?
+- id: emotional
+  name: Cansancio Emocional
+  questions:
+  - ¿Sentís que estás al borde de una crisis emocional o de llorar sin motivo aparente?
+  - ¿Tenés la sensación de que las pequeñas molestias se vuelven gigantescas porque
+    estás emocionalmente agotado?
+  - ¿Notás que te cuesta disfrutar momentos que antes te daban alegría o satisfacción?
+  - ¿Tenés miedo de mostrar tu vulnerabilidad porque sentís que no podrías lidiar
+    con una reacción negativa?
+  - ¿Te encontrás distanciándote de personas importantes en tu vida porque sentís
+    que no tenés energía emocional para ellos?
+  - ¿Te irritás fácilmente o sentís que tu tolerancia a situaciones emocionales difíciles
+    es baja?
+- id: sensory
+  name: Cansancio Sensorial
+  questions:
+  - ¿Notás que te agobian las luces brillantes, los ruidos fuertes o el contacto físico
+    con demasiada gente?
+  - ¿Te cuesta desconectar del uso de dispositivos electrónicos, aunque sentís que
+    te sobrecargan?
+  - ¿Te sentís agotado después de un largo día de exposición a pantallas (celular,
+    computadora, televisión)?
+  - ¿Los olores intensos o las multitudes te causan incomodidad o fatiga?
+  - ¿Te sentís aliviado cuando encontrás un espacio tranquilo, lejos del ruido y la
+    estimulación sensorial?
+  - ¿Sentís la necesidad de escapar o aislarte después de eventos llenos de estímulos
+    (conciertos, fiestas, centros comerciales)?
+- id: social
+  name: Cansancio Social
+  questions:
+  - ¿Preferís pasar tiempo a solas, incluso con personas cercanas, porque te sentís
+    drenado emocionalmente?
+  - ¿Te encontrás evitando llamadas o mensajes de personas porque no tenés energía
+    para interactuar?
+  - ¿Sentís que tenés que ponerte una "máscara" para relacionarte socialmente, lo
+    que te deja aún más agotado?
+  - ¿Te sentís culpable por no estar disponible para tus amigos o familiares como
+    te gustaría?
+  - ¿Notás que las conversaciones superficiales te resultan agotadoras, pero no tenés
+    ganas de profundizar en temas importantes?
+  - ¿Te cuesta recargar energías luego de pasar tiempo en eventos sociales, incluso
+    cuando te divertís?
+- id: spiritual
+  name: Cansancio Espiritual
+  questions:
+  - ¿Sentís que estás buscando un propósito o significado más profundo en tu vida,
+    pero no lo encontrás?
+  - ¿Te preguntás si lo que hacés cada día realmente contribuye a tu bienestar y al
+    de los demás?
+  - ¿Te cuesta encontrar una conexión con algo más grande, ya sea espiritual, filosófico
+    o relacionado con tu propósito en la vida?
+  - ¿Te sentís desconectado de tus valores o de la forma en que solías ver el mundo?
+  - ¿Te encontrás cuestionando el sentido de las cosas que antes te parecían claras?
+  - ¿Te sentís espiritualmente estancado o desconectado, aunque busqués momentos de
+    calma o meditación?
+- id: creative
+  name: Cansancio Creativo
+  questions:
+  - ¿Te cuesta generar ideas nuevas o soluciones creativas en áreas que solían fluir
+    con facilidad?
+  - ¿Sentís que tu creatividad está bloqueada o apagada, incluso cuando tratás de
+    activarla?
+  - ¿Notás que proyectos creativos que antes te emocionaban ahora te parecen una carga?
+  - ¿Te encontrás dudando de tu capacidad para crear o innovar en tu trabajo o pasatiempos?
+  - ¿Sentís que estás constantemente en un estado de "consumo" (viendo, leyendo, escuchando),
+    pero no de creación?
+  - ¿Notás que evitás actividades creativas porque sentís que "no tenés nada que aportar"
+    o "ya no sos bueno en eso"?
