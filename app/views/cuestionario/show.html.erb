@@ -38,6 +38,14 @@
       </div>
     <% end %>
     
-    <%= form.submit "Continuar", class: "bg-blue-500 text-white px-6 py-2 rounded mt-6" %>
+    <div class="flex justify-between mt-6">
+      <% if @previous_category %>
+        <%= link_to "← Anterior", cuestionario_category_path(@previous_category.identifier), class: "bg-gray-500 text-white px-6 py-2 rounded" %>
+      <% else %>
+        <div></div>
+      <% end %>
+      
+      <%= form.submit "Continuar", class: "bg-blue-500 text-white px-6 py-2 rounded" %>
+    </div>
   <% end %>
 </div>

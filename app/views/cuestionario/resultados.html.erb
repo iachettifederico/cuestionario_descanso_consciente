@@ -1,0 +1,41 @@
+<div class="max-w-4xl mx-auto p-6">
+  <h1 class="text-2xl font-bold mb-6">Resultados del Cuestionario</h1>
+  
+  <div class="mb-8 p-4 bg-blue-50 rounded">
+    <h2 class="text-xl font-semibold mb-4">Puntuaciones por Categoría</h2>
+    <% @categories.each do |category| %>
+      <div class="mb-2">
+        <strong><%= category.name %>:</strong> <%= @category_scores[category.id] %> puntos
+      </div>
+    <% end %>
+  </div>
+  
+  <% @categories.each do |category| %>
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 border-b pb-2">
+        <%= category.name %> - <span class="text-blue-600"><%= @category_scores[category.id] %> puntos</span>
+      </h2>
+      
+      <% category.questions.each do |question| %>
+        <div class="mb-4 p-4 bg-gray-50 rounded">
+          <p class="font-medium mb-2"><%= question.text %></p>
+          <% answer_value = @answers[question.id.to_s] %>
+          <% if answer_value %>
+            <% answer_text = case answer_value
+                             when 0 then "Nunca"
+                             when 1 then "A veces"
+                             when 2 then "Frecuentemente"
+                             when 3 then "Siempre"
+                             else "Sin respuesta"
+                             end %>
+            <p class="text-blue-600"><strong>Respuesta:</strong> <%= answer_text %> (<%= answer_value %>)</p>
+          <% else %>
+            <p class="text-red-600"><strong>Sin respuesta</strong></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <%= link_to "← Volver al inicio", "/cuestionario", class: "bg-blue-500 text-white px-6 py-2 rounded" %>
+</div>

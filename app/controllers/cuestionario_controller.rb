@@ -5,6 +5,7 @@ class CuestionarioController < ApplicationController
     @category = find_category
     @categories = Category.ordered
     @answers = session[:questionnaire_answers] || {}
+    @previous_category = find_previous_category
   end
 
   def submit
@@ -26,8 +27,17 @@ class CuestionarioController < ApplicationController
     if next_category
       redirect_to cuestionario_category_path(next_category.identifier)
     else
-      redirect_to cuestionario_path, notice: "Cuestionario completado"
+      redirect_to "/cuestionario/formulario"
     end
+  end
+
+  def formulario
+  end
+
+  def resultados
+    @answers = session[:questionnaire_answers] || {}
+    @categories = Category.ordered.includes(:questions)
+    @category_scores = calculate_category_scores
   end
 
   private
@@ -40,11 +50,30 @@ class CuestionarioController < ApplicationController
     end
   end
 
+  def find_previous_category
+    return nil unless params[:category_id]
+
+    current_category = Category.find_by(identifier: params[:category_id])
+    return nil unless current_category
+
+    Category.ordered.where("position < ?", current_category.position).last
+  end
+
   def all_questions_answered?(category)
     return false unless params[:answers]
 
     category.questions.all? do |question|
       params[:answers][question.id.to_s].present?
     end
+  end
+
+  def calculate_category_scores
+    scores = {}
+    @categories.each do |category|
+      scores[category.id] = category.questions.sum { |question|
+        @answers[question.id.to_s].to_i
+      }
+    end
+    scores
   end
 end

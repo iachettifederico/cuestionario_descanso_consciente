@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   root to: redirect("/cuestionario")
   get "cuestionario", to: "cuestionario#show"
+  get "cuestionario/formulario", to: "cuestionario#formulario"
+  get "cuestionario/resultados", to: "cuestionario#resultados"
   get "cuestionario/:category_id", to: "cuestionario#show", as: :cuestionario_category
   post "cuestionario/:category_id", to: "cuestionario#submit"
 end
