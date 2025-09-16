@@ -1,1 +1,295 @@
 @import "tailwindcss";
+
+/* ===== CUESTIONARIO DESCANSO CONSCIENTE THEME ===== */
+
+@theme {
+  /* Custom Color Palette */
+  --color-coral: #ec8d8c;
+  --color-coral-light: #f8afae;
+  --color-green: #84a16b;
+  --color-green-light: #a8c598;
+  --color-green-dark: #5a7a41;
+  --color-cream: #f7f5f3;
+  --color-warm-white: #fefefe;
+  --color-dark: #3a3a3a;
+  --color-medium: #666666;
+  --color-light: #888888;
+  --color-yellow: #f4cf82;
+}
+
+/* ===== BASE STYLES ===== */
+
+@layer base {
+  /* Global Font Family */
+  body {
+    font-family: 'Simonetta', serif;
+  }
+
+  /* Form Elements */
+  input[type="radio"] {
+    accent-color: var(--color-coral);
+  }
+
+  label {
+    font-family: 'Simonetta', serif;
+    color: var(--color-medium);
+  }
+
+  button, input[type="submit"] {
+    font-family: 'Simonetta', serif;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+}
+
+/* ===== COMPONENT STYLES ===== */
+
+@layer components {
+  /* Questionnaire Container */
+  .questionnaire-container {
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+    min-height: 100vh;
+    color: var(--color-dark);
+    font-family: 'Simonetta', serif;
+  }
+
+  .questionnaire-main-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: var(--color-warm-white);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color-cream);
+  }
+
+  @media (min-width: 768px) {
+    .questionnaire-main-container {
+      padding: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* Header Decoration */
+  .header::after {
+    content: '✨';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-warm-white);
+    padding: 0 15px;
+    font-size: 24px;
+  }
+
+  /* Results Container Background Effect */
+  .results-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(132, 161, 107, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Primary Result Section */
+  .primary-result {
+    color: #5a2a2a;
+  }
+
+  .primary-result p,
+  .primary-result h3,
+  .primary-result h4 {
+    color: #5a2a2a;
+    font-weight: 900;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .primary-result .bg-white {
+    color: #5a2a2a;
+  }
+
+  .primary-result .bg-white p {
+    color: #5a2a2a;
+  }
+
+  /* Creator Info Section */
+  .creator-info {
+    color: #ffffff;
+  }
+
+  .creator-info p,
+  .creator-info strong {
+    color: #ffffff;
+  }
+
+  /* Important Note Decoration */
+  .important-note::before {
+    content: '💙';
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background: var(--color-warm-white);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 20px;
+  }
+
+  /* Progress Bars */
+  .progress-bar.good {
+    background: linear-gradient(90deg, var(--color-green-light), var(--color-green));
+  }
+
+  .progress-bar.moderate {
+    background: linear-gradient(90deg, var(--color-yellow), #e6b800);
+  }
+
+  .progress-bar.high {
+    background: linear-gradient(90deg, var(--color-coral-light), var(--color-coral));
+  }
+
+  /* Question Items */
+  .question-item {
+    transition: all 0.3s ease;
+  }
+
+  .question-item:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Form Container */
+  .form-container {
+    background: linear-gradient(145deg, var(--color-warm-white) 0%, var(--color-cream) 100%);
+    border: 2px solid var(--color-cream);
+    box-shadow: 
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Shadow Container */
+  .shadow-container {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Decorative Background */
+  .questionnaire-decoration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16rem;
+    height: 16rem;
+    background: radial-gradient(circle, rgba(248, 175, 174, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Developer Tools */
+  .developer-tools {
+    font-family: 'Simonetta', serif;
+    backdrop-filter: blur(8px);
+    border: 3px solid #2d3748;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  }
+
+  .developer-tools input[type="submit"],
+  .developer-tools a {
+    border: none;
+    text-decoration: none;
+  }
+
+  .developer-tools input[type="submit"]:hover,
+  .developer-tools a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* ===== CUSTOM UTILITIES ===== */
+
+@layer utilities {
+  /* Custom Background Gradients */
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, var(--color-coral-light) 0%, var(--color-coral) 100%);
+  }
+
+  .bg-gradient-green {
+    background: linear-gradient(135deg, var(--color-green-light) 0%, var(--color-green) 100%);
+  }
+
+  .bg-gradient-cream {
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-warm-white) 100%);
+  }
+
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  }
+
+  /* Developer Tools Button Styles */
+  .dev-btn-coral {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    border: 3px solid #dc2626;
+    color: #991b1b;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .dev-btn-coral:hover {
+    background: linear-gradient(135deg, #fecaca, #fca5a5);
+    border-color: #991b1b;
+    color: #7f1d1d;
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  }
+  
+  .dev-btn-green {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    border: 3px solid #16a34a;
+    color: #14532d;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .dev-btn-green:hover {
+    background: linear-gradient(135deg, #bbf7d0, #86efac);
+    border-color: #15803d;
+    color: #052e16;
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+  }
+  
+  .dev-btn-yellow {
+    background: linear-gradient(135deg, #fefce8, #fef3c7);
+    border: 3px solid #d97706;
+    color: #92400e;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .dev-btn-yellow:hover {
+    background: linear-gradient(135deg, #fef3c7, #fed7aa);
+    border-color: #b45309;
+    color: #78350f;
+    box-shadow: 0 8px 25px rgba(217, 119, 6, 0.3);
+  }
+  
+  .dev-btn-blue {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 3px solid #2563eb;
+    color: #1e3a8a;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .dev-btn-blue:hover {
+    background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+    border-color: #1d4ed8;
+    color: #1e40af;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+  }
+}
