@@ -26,7 +26,7 @@ group :development, :test do
   gem "debug", "~> 1.11.0", platforms: %i[mri windows], require: "debug/prelude"
   gem "pry-rails", "~> 0.3.11"
   gem "rspec-rails", "~> 8.0.2"
-  gem "rubocop", "~> 1.80.2", require: false
+  gem "rubocop", "~> 1.81.0", require: false
   gem "rubocop-rails", "~> 2.33.3", require: false
 end
 
