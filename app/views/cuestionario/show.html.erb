@@ -65,36 +65,36 @@
 
               <!-- Likert scale options -->
               <div class="flex flex-wrap gap-4 justify-center">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 0, @answers[question.id.to_s] == 0, 
-                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
+                      class: "flower-radio", 
                       id: "question_#{question.id}_0" %>
                   <%= label_tag "question_#{question.id}_0", "0: Nunca", 
-                      class: "text-sm md:text-base text-medium cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 1, @answers[question.id.to_s] == 1, 
-                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
+                      class: "flower-radio", 
                       id: "question_#{question.id}_1" %>
                   <%= label_tag "question_#{question.id}_1", "1: A veces", 
-                      class: "text-sm md:text-base text-medium cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 2, @answers[question.id.to_s] == 2, 
-                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
+                      class: "flower-radio", 
                       id: "question_#{question.id}_2" %>
                   <%= label_tag "question_#{question.id}_2", "2: Frecuentemente", 
-                      class: "text-sm md:text-base text-medium cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 3, @answers[question.id.to_s] == 3, 
-                      class: "w-4 h-4 text-coral focus:ring-coral/30", 
+                      class: "flower-radio", 
                       id: "question_#{question.id}_3" %>
                   <%= label_tag "question_#{question.id}_3", "3: Siempre", 
-                      class: "text-sm md:text-base text-medium cursor-pointer" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
                 </div>
               </div>
             </div>
