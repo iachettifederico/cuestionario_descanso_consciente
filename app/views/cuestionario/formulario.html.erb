@@ -1,8 +1,4 @@
-<% content_for :head do %>
-  <!-- Doppler Form Scripts -->
-  <script src="https://cdn.fromdoppler.com/formgenerator/latest/vendor.js?26830436"></script>
-  <link rel="stylesheet" href="https://cdn.fromdoppler.com/formgenerator/latest/styles.css?26830436" />
-<% end %>
+
 
 <div class="bg-gradient-cream min-h-screen text-dark leading-relaxed">
   <div class="max-w-4xl mx-auto p-4 md:p-8 bg-warm-white shadow-2xl rounded-3xl my-4 md:my-8 relative overflow-hidden border-2 border-cream">
@@ -12,9 +8,15 @@
       
       <p class="text-lg text-medium mb-8">Gracias por completar el Cuestionario de Descanso Consciente.</p>
       
-      <!-- Doppler Form -->
+      <!-- Systeme.io Form -->
       <div class="mb-8">
-        <div data-dp-form="qhVL1gRoLcIRZwYEDRGbBw%3d%3d"></div>
+        <form method="post" action="https://systeme.io/embedded/33481186/subscription" class="max-w-md mx-auto">
+          <input type="text" name="first_name" placeholder="Nombre" class="w-full mb-4 px-4 py-3 rounded-xl border-2 border-cream focus:border-green focus:outline-none transition-colors duration-200" />
+          <input type="text" name="email" placeholder="Email" class="w-full mb-6 px-4 py-3 rounded-xl border-2 border-cream focus:border-green focus:outline-none transition-colors duration-200" />
+          <div class="f-row">
+            <button type="submit" class="btn w-full bg-green text-white px-8 py-3 rounded-xl font-medium shadow-md hover:bg-green/90 transition-colors duration-200">Subscribe</button>
+          </div>
+        </form>
       </div>
       
       <% if Rails.env.development? %>
