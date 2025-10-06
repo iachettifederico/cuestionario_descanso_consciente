@@ -35,7 +35,11 @@
 
       <%= form_with url: cuestionario_category_path(@category), method: :post, local: true, class: "space-y-6" do |form| %>
         <!-- Category section -->
-        <div class="category-section mb-8">
+        <div class="category-section mb-8" 
+             data-controller="question-navigator" 
+             data-question-navigator-total-value="<%= @category.questions.count %>"
+             data-question-navigator-current-value="0">
+          
           <div class="bg-green-light/10 border-2 border-green-light p-6 rounded-3xl mb-6 text-center shadow-md category-description">
             <h3 class="text-2xl md:text-3xl font-bold mb-3 text-green-dark"><%= @category.name %></h3>
             <p class="text-sm md:text-base text-medium mb-4">
@@ -52,14 +56,23 @@
             </div>
           </div>
 
+          <!-- Progress indicator -->
+          <div class="text-center mb-6">
+            <div class="inline-block bg-coral text-white px-4 py-2 rounded-full font-medium text-sm shadow-md"
+                 data-question-navigator-target="counter">
+              Pregunta 1 de <%= @category.questions.count %>
+            </div>
+          </div>
+
           <!-- Questions -->
           <% @category.questions.each_with_index do |question, index| %>
-            <div class="question-item bg-warm-white border-2 border-cream rounded-3xl p-6 mb-4 shadow-md hover:shadow-xl hover:border-coral-light transition-all duration-300 relative">
+            <div class="question-item bg-warm-white border-2 border-cream rounded-3xl p-6 mb-4 shadow-md hover:shadow-xl hover:border-coral-light transition-all duration-300 relative <%= 'hidden' if index > 0 %>"
+                 data-question-navigator-target="question">
               <div class="absolute -top-3 left-6 bg-coral text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-md">
                 <%= index + 1 %>
               </div>
 
-              <div class="text-lg md:text-xl mb-4 text-dark leading-relaxed mt-2">
+              <div class="text-lg md:text-xl mb-6 text-dark leading-relaxed mt-2">
                 <%= question.text %>
               </div>
 
@@ -68,37 +81,58 @@
                 <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 0, @answers[question.id.to_s] == 0, 
                       class: "flower-radio", 
-                      id: "question_#{question.id}_0" %>
+                      id: "question_#{question.id}_0",
+                      data: { action: "change->question-navigator#answerSelected" } %>
                   <%= label_tag "question_#{question.id}_0", "0: Nunca", 
-                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none px-3 py-2 rounded-lg hover:bg-green-light/20 transition-colors" %>
                 </div>
 
                 <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 1, @answers[question.id.to_s] == 1, 
                       class: "flower-radio", 
-                      id: "question_#{question.id}_1" %>
+                      id: "question_#{question.id}_1",
+                      data: { action: "change->question-navigator#answerSelected" } %>
                   <%= label_tag "question_#{question.id}_1", "1: A veces", 
-                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none px-3 py-2 rounded-lg hover:bg-green-light/20 transition-colors" %>
                 </div>
 
                 <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 2, @answers[question.id.to_s] == 2, 
                       class: "flower-radio", 
-                      id: "question_#{question.id}_2" %>
+                      id: "question_#{question.id}_2",
+                      data: { action: "change->question-navigator#answerSelected" } %>
                   <%= label_tag "question_#{question.id}_2", "2: Frecuentemente", 
-                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none px-3 py-2 rounded-lg hover:bg-green-light/20 transition-colors" %>
                 </div>
 
                 <div class="flex items-center gap-3">
                   <%= radio_button_tag "answers[#{question.id}]", 3, @answers[question.id.to_s] == 3, 
                       class: "flower-radio", 
-                      id: "question_#{question.id}_3" %>
+                      id: "question_#{question.id}_3",
+                      data: { action: "change->question-navigator#answerSelected" } %>
                   <%= label_tag "question_#{question.id}_3", "3: Siempre", 
-                      class: "text-sm md:text-base text-medium cursor-pointer select-none" %>
+                      class: "text-sm md:text-base text-medium cursor-pointer select-none px-3 py-2 rounded-lg hover:bg-green-light/20 transition-colors" %>
                 </div>
               </div>
             </div>
           <% end %>
+
+          <!-- Navigation buttons between questions -->
+          <div class="flex justify-between items-center mt-6 mb-4">
+            <button type="button" 
+                    class="invisible px-4 py-2 bg-green-light text-white rounded-lg font-medium text-sm hover:bg-green transition-colors duration-200 shadow-md"
+                    data-question-navigator-target="prevButton"
+                    data-action="click->question-navigator#previous">
+              ← Pregunta Anterior
+            </button>
+            
+            <button type="button" 
+                    class="px-4 py-2 bg-coral text-white rounded-lg font-medium text-sm hover:bg-coral/90 transition-colors duration-200 shadow-md"
+                    data-question-navigator-target="nextButton"
+                    data-action="click->question-navigator#next">
+              Siguiente Pregunta →
+            </button>
+          </div>
         </div>
 
         <!-- Navigation buttons -->
@@ -106,13 +140,13 @@
           <% if @previous_category %>
             <%= link_to cuestionario_category_path(@previous_category.identifier), 
                 class: "px-6 py-3 bg-green-light text-white rounded-xl font-medium text-sm hover:bg-green transition-colors duration-200 shadow-md" do %>
-              ← Categoría Anterior
+              ← Cansancio Anterior
             <% end %>
           <% else %>
             <div></div>
           <% end %>
           
-          <%= form.submit @next_category ? "Siguiente Categoría →" : "Ver Resultados →", 
+          <%= form.submit @next_category ? "Siguiente Cansancio →" : "Ver Resultados →", 
               class: "px-6 py-3 bg-coral text-white rounded-xl font-medium text-sm hover:bg-coral/90 transition-colors duration-200 shadow-md" %>
         </div>
       <% end %>

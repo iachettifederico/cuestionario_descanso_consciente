@@ -33,6 +33,15 @@ class CuestionarioController < ApplicationController
     @predominant_tiredness = find_predominant_tiredness
   end
 
+  def descargar_resultados
+    @answers = session[:questionnaire_answers] || {}
+    @categories = Category.ordered.includes(:questions)
+    @category_scores = calculate_category_scores
+    @predominant_tiredness = find_predominant_tiredness
+
+    render layout: false
+  end
+
   # Developer tools methods (only available in development)
   def fill_random_answers
     return head :not_found unless Rails.env.development?

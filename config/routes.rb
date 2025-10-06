@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get "cuestionario/comenzar", to: "cuestionario#show"
   get "cuestionario/formulario", to: "cuestionario#formulario"
   get "cuestionario/resultados", to: "cuestionario#resultados"
+  get "cuestionario/descargar", to: "cuestionario#descargar_resultados"
 
   # Developer tools (only in development) - must come before catch-all routes
   if Rails.env.development?
