@@ -12,7 +12,7 @@ Rails.application.configure do
     policy.font_src    :self, :https, :data
     policy.img_src     :self, :https, :data
     policy.object_src  :none
-    policy.script_src  :self, :https, "https://omashu.org", "https://systeme.io"
+    policy.script_src  :self, :https, "https://omashu.org", "https://systeme.io", "https://cdnjs.cloudflare.com"
     policy.style_src   :self, :https, "https://omashu.org"
     policy.connect_src :self, :https, "https://omashu.org", "https://systeme.io"
     policy.form_action :self, "https://systeme.io"

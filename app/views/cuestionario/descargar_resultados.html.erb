@@ -1,5 +1,4 @@
 <%
-  # Helper methods for styling
   def get_category_color_class(score, max_score)
     percentage = (score.to_f / max_score * 100).round
     if percentage >= 60
@@ -44,65 +43,13 @@
     end
   end
 
-  # Calculate total affirmative responses
   total_responses = @category_scores.values.sum
-  max_possible = @categories.count * 6 * 3 # 7 categories * 6 questions * max score 3
+  max_possible = @categories.count * 6 * 3
 %>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resultados - Cuestionario de Descanso Consciente</title>
-  
-  <!-- Include all stylesheets -->
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  
-  <!-- Google Fonts - Simonetta -->
-  <link href="https://fonts.googleapis.com/css2?family=Simonetta:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Include app stylesheets (same as main layout) -->
-  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-  
-  <style>
-    @media print {
-      body { 
-        -webkit-print-color-adjust: exact !important;
-        color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-      .no-print { display: none !important; }
-      .page-break { page-break-before: always; }
-    }
-    
-    @page {
-      margin: 1cm;
-      size: A4;
-    }
-    
-    .progress-bar.high {
-      background: linear-gradient(90deg, #ff7b7b 0%, #ff9999 100%);
-    }
-    
-    .progress-bar.moderate {
-      background: linear-gradient(90deg, #fbbf24 0%, #fcd34d 100%);
-    }
-    
-    .progress-bar.good {
-      background: linear-gradient(90deg, #6dd687 0%, #84e095 100%);
-    }
-  </style>
-</head>
-
-<body class="bg-gradient-cream min-h-screen text-dark leading-relaxed">
+<div class="bg-gradient-cream min-h-screen text-dark leading-relaxed">
   <div class="max-w-5xl mx-auto p-4 md:p-8 bg-warm-white shadow-2xl rounded-3xl my-4 md:my-8 relative overflow-hidden border-2 border-cream">
-    <!-- Subtle background decoration -->
-    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-coral-light/20 to-transparent rounded-full -translate-y-32 translate-x-32 pointer-events-none"></div>
-    
     <div class="relative z-10">
-      <!-- Header -->
       <div class="text-center mb-12 pb-8 border-b-2 border-green-light relative">
         <h1 class="text-5xl md:text-7xl font-bold text-green mb-2 drop-shadow-sm">Tus Resultados</h1>
         <h2 class="text-2xl md:text-3xl text-coral font-normal italic">Cuestionario de Descanso Consciente</h2>
@@ -111,13 +58,8 @@
       </div>
 
       <% if @predominant_tiredness %>
-        <!-- Primary Result -->
-        <% 
-          score = @category_scores[@predominant_tiredness.id]
-          max_score = 18
-        %>
-        <div class="bg-coral-light/20 border-4 <%= get_category_color_class(score, max_score) %> rounded-3xl p-8 md:p-12 mb-12 text-center shadow-xl relative">
-          <div class="bg-white border-2 border-gray-200 rounded-2xl px-6 py-4 mx-auto mb-8 shadow-lg max-w-sm">
+        <div class="bg-gradient-coral p-8 md:p-12 rounded-3xl mb-12 text-center shadow-xl relative primary-result">
+          <div class="bg-white bg-opacity-20 border-4 border-white rounded-2xl px-6 py-4 mx-auto mb-8 shadow-lg max-w-sm">
             <div class="flex items-center justify-center mb-2">
               <span class="text-3xl mr-3">🌸</span>
               <div class="text-center">
@@ -134,7 +76,6 @@
         </div>
       <% end %>
 
-      <!-- Detailed Results -->
       <div class="mb-12">
         <h3 class="text-3xl md:text-5xl text-center text-dark mb-8 font-bold">Resultados Detallados</h3>
         
@@ -144,16 +85,16 @@
             <% max_score = 18 %>
             <% percentage = (score.to_f / max_score * 100).round %>
             
-            <div class="bg-warm-white border-2 <%= get_category_color_class(score, max_score) %> rounded-3xl p-6 md:p-8 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+            <div class="bg-warm-white border-2 <%= get_category_color_class(score, max_score) %> rounded-3xl p-6 md:p-8 shadow-md">
               <div class="flex justify-between items-center mb-6">
                 <h4 class="text-lg md:text-xl font-bold text-dark"><%= category.name %></h4>
                 <div class="px-4 py-2 rounded-3xl font-bold text-lg <%= get_badge_color_class(score, max_score) %>">
-                  <span style="font-size: 1.2em"><%= score %></span>/<%= max_score %>
+                  <span class="text-xl"><%= score %></span>/<%= max_score %>
                 </div>
               </div>
 
               <div class="bg-cream h-3 rounded-full overflow-hidden mb-6">
-                <div class="<%= get_progress_bar_color(score, max_score) %> h-full rounded-full transition-all duration-500" style="width: <%= percentage %>%"></div>
+                <div class="<%= get_progress_bar_color(score, max_score) %> h-full rounded-full transition-all duration-500" data-controller="progress-bar" data-width="<%= percentage %>"></div>
               </div>
               
               <p class="text-medium leading-relaxed text-base md:text-lg">
@@ -164,7 +105,6 @@
         </div>
       </div>
 
-      <!-- Important Note -->
       <div class="bg-gradient-blue border-2 border-blue-500 rounded-3xl p-6 md:p-8 mb-8 relative">
         <h4 class="text-blue-800 text-xl md:text-2xl mb-4 font-bold">Nota importante</h4>
         <p class="text-blue-900 leading-relaxed text-base md:text-lg">
@@ -175,9 +115,8 @@
         </p>
       </div>
 
-      <!-- Creator Info -->
-      <div class="text-center">
-        <div class="bg-gradient-green p-6 md:p-8 rounded-3xl text-white text-center">
+      <div class="text-center mb-8">
+        <div class="bg-gradient-green p-6 md:p-8 rounded-3xl text-center creator-info">
           <p class="mb-2 text-lg"><strong>Creado por:</strong></p>
           <p class="text-xl font-bold">Gimena Galarraga</p>
           <p class="italic opacity-90 mb-2">Psicóloga especializada en mindfulness, compasión y creatividad</p>
@@ -186,28 +125,17 @@
           </p>
         </div>
       </div>
+
+      <div class="no-print text-center space-y-4">
+        <button id="download-pdf-btn" class="px-8 py-3 bg-coral hover:bg-coral/90 text-white rounded-xl font-medium transition-colors duration-200 shadow-lg text-lg">
+          📄 Descargar PDF
+        </button>
+        <div>
+          <%= link_to "/cuestionario/resultados", class: "inline-block px-8 py-3 bg-green hover:bg-green/90 text-white rounded-xl font-medium transition-colors duration-200 shadow-lg" do %>
+            ← Volver a resultados
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Print/Download Controls -->
-  <div class="no-print fixed bottom-4 right-4 space-y-2">
-    <button onclick="window.print()" class="block w-full bg-coral text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-coral/90 transition-colors">
-      🖨️ Imprimir / Guardar como PDF
-    </button>
-    <a href="/cuestionario/resultados" class="block w-full bg-green text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:bg-green/90 transition-colors text-center">
-      ← Volver a resultados
-    </a>
-  </div>
-
-  <script>
-    // Auto-open print dialog after page loads
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        if (window.location.search.includes('auto_print=true')) {
-          window.print();
-        }
-      }, 500);
-    });
-  </script>
-</body>
-</html>
+</div>

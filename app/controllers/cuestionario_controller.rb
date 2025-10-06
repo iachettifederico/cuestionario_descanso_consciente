@@ -39,7 +39,7 @@ class CuestionarioController < ApplicationController
     @category_scores = calculate_category_scores
     @predominant_tiredness = find_predominant_tiredness
 
-    render layout: false
+    render layout: "pdf"
   end
 
   # Developer tools methods (only available in development)

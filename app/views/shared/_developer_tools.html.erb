@@ -1,13 +1,13 @@
 <% if Rails.env.development? %>
-  <div class="developer-tools fixed bottom-4 right-4 bg-warm-white border-3 border-dark rounded-2xl shadow-2xl p-6 z-50 max-w-sm">
+  <div class="developer-tools fixed bottom-4 right-4 bg-warm-white border-3 border-dark rounded-2xl shadow-2xl p-6 z-50 max-w-sm" data-controller="dev-tools">
     <div class="flex items-center justify-between mb-4">
       <h4 class="text-lg font-black text-dark">🛠️ Dev Tools</h4>
-      <button onclick="toggleDevTools()" class="text-lg text-dark hover:text-coral font-bold px-2 py-1 rounded hover:bg-cream transition-all">
-        <span id="dev-toggle">−</span>
+      <button data-action="click->dev-tools#toggle" class="text-lg text-dark hover:text-coral font-bold px-2 py-1 rounded hover:bg-cream transition-all">
+        <span data-dev-tools-target="toggle">−</span>
       </button>
     </div>
     
-    <div id="dev-tools-content" class="space-y-4">
+    <div data-dev-tools-target="content" class="space-y-4">
       <!-- Fill current category with random values -->
       <% if defined?(@category) && @category.present? %>
         <%= form_with url: "/cuestionario/dev/fill_random_current", method: :post, local: true, class: "w-full" do |form| %>
@@ -49,22 +49,7 @@
     </div>
   </div>
 
-  <script>
-    function toggleDevTools() {
-      const content = document.getElementById('dev-tools-content');
-      const toggle = document.getElementById('dev-toggle');
-      
-      if (content.style.display === 'none') {
-        content.style.display = 'block';
-        toggle.textContent = '−';
-      } else {
-        content.style.display = 'none';
-        toggle.textContent = '+';
-      }
-    }
-  </script>
-
-  <style>
+  <style nonce="<%= content_security_policy_nonce %>">
     .developer-tools {
       font-family: 'Simonetta', serif;
       backdrop-filter: blur(8px);
