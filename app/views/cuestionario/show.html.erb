@@ -28,9 +28,11 @@
         </div>
 
         <!-- Category progress indicator -->
-        <div class="flex justify-center text-sm font-semibold text-medium mb-4">
-          <span>Categoría <%= @current_category_position %> de 7</span>
+        <div class="flex justify-center text-sm font-semibold text-medium mb-6">
+          <span>Cansancio <%= @current_category_position %> de 7</span>
         </div>
+
+
       </div>
 
       <%= form_with url: cuestionario_category_path(@category), method: :post, local: true, class: "space-y-6" do |form| %>
@@ -118,7 +120,7 @@
           <% end %>
 
           <!-- Navigation buttons between questions -->
-          <div class="flex justify-between items-center mt-6 mb-4">
+          <div class="flex justify-between items-center mt-6 mb-6">
             <button type="button" 
                     class="invisible px-4 py-2 bg-green-light text-white rounded-lg font-medium text-sm hover:bg-green transition-colors duration-200 shadow-md"
                     data-question-navigator-target="prevButton"
@@ -132,6 +134,30 @@
                     data-action="click->question-navigator#next">
               Siguiente Pregunta →
             </button>
+          </div>
+
+          <!-- Global progress bar -->
+          <div class="bg-cream rounded-full p-2 mb-4">
+            <div class="flex justify-center items-center space-x-4">
+              <% @categories.each_with_index do |category, index| %>
+                <% 
+                  position = index + 1
+                  is_current = position == @current_category_position
+                  is_completed = position < @current_category_position
+                  short_name = category.name.gsub("Cansancio ", "")
+                %>
+                <div class="flex flex-col items-center">
+                  <!-- Progress dot -->
+                  <div class="w-4 h-4 rounded-full mb-2 transition-all duration-300 <%= is_completed ? 'bg-green shadow-lg' : (is_current ? 'bg-coral shadow-lg animate-pulse' : 'bg-gray-300') %>"></div>
+                  
+                  <!-- Category label -->
+                  <div class="text-xs text-center font-medium <%= is_current ? 'text-coral' : (is_completed ? 'text-green-dark' : 'text-gray-500') %>">
+                    <div class="hidden sm:block"><%= short_name %></div>
+                    <div class="sm:hidden"><%= short_name.split(' ').first %></div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
 

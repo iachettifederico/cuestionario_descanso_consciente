@@ -60,19 +60,23 @@
 
       <% if @predominant_tiredness %>
         <!-- Primary Result -->
-        <div class="bg-gradient-coral p-8 md:p-12 rounded-3xl mb-12 text-white text-center shadow-xl relative primary-result">
-          <div class="bg-white bg-opacity-20 border-4 border-white rounded-2xl px-6 py-4 mx-auto mb-8 text-white shadow-lg max-w-sm">
+        <% 
+          score = @category_scores[@predominant_tiredness.id]
+          max_score = 18
+        %>
+        <div class="bg-coral-light/20 border-4 <%= get_category_color_class(score, max_score) %> rounded-3xl p-8 md:p-12 mb-12 text-center shadow-xl relative">
+          <div class="bg-white border-2 border-gray-200 rounded-2xl px-6 py-4 mx-auto mb-8 shadow-lg max-w-sm">
             <div class="flex items-center justify-center mb-2">
               <span class="text-3xl mr-3">🌸</span>
               <div class="text-center">
-                <p class="text-lg font-bold"><%= total_responses %> respuestas afirmativas</p>
-                <p class="text-sm opacity-90">de cansancio detectadas</p>
+                <p class="text-lg font-bold text-dark"><%= total_responses %> respuestas afirmativas</p>
+                <p class="text-sm text-gray-600">de cansancio detectadas</p>
               </div>
             </div>
           </div>
-          <h3 class="text-xl md:text-2xl mb-4 opacity-95">Tu tipo de cansancio predominante:</h3>
-          <h4 class="text-2xl md:text-4xl mb-6 font-bold drop-shadow-sm"><%= @predominant_tiredness.name %></h4>
-          <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed opacity-95">
+          <h3 class="text-xl md:text-2xl mb-4 text-dark">Tu tipo de cansancio predominante:</h3>
+          <h4 class="text-2xl md:text-4xl mb-6 font-bold text-dark drop-shadow-sm"><%= @predominant_tiredness.name %></h4>
+          <p class="text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-medium">
             <%= get_recommendation_text(@category_scores[@predominant_tiredness.id], 18) %>
           </p>
         </div>
