@@ -38,7 +38,7 @@ class CuestionarioController < ApplicationController
     return head :not_found unless Rails.env.development?
 
     session[:questionnaire_answers] = {}
-    Question.all.each do |question|
+    Question.find_each do |question|
       session[:questionnaire_answers][question.id.to_s] = rand(0..3)
     end
 
@@ -87,7 +87,7 @@ class CuestionarioController < ApplicationController
 
     # Fill any missing answers with random values
     session[:questionnaire_answers] ||= {}
-    Question.all.each do |question|
+    Question.find_each do |question|
       session[:questionnaire_answers][question.id.to_s] ||= rand(0..3)
     end
 
