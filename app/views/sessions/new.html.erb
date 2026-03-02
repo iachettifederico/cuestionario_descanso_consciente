@@ -23,14 +23,14 @@
               placeholder: "Tu contraseña", autocomplete: "current-password" %>
       </div>
 
-      <div class="mt-4 mb-6 flex items-center">
-        <label class="flex cursor-pointer items-center gap-2 text-sm text-gray-500">
-          <%= f.check_box :remember_me, class: "accent-[#2d6a4f]" %>
+      <div style="display:flex;align-items:center;margin:16px 0 24px">
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#6b7280;cursor:pointer">
+          <%= f.check_box :remember_me, style: "accent-color:#2d6a4f" %>
           Recordarme
         </label>
       </div>
 
-      <%= f.submit "Ingresar →", class: "btn btn-primary-diario w-full" %>
+      <%= f.submit "Ingresar →", class: "btn btn-primary-diario", style: "width:100%" %>
     <% end %>
 
     <div class="auth-footer">

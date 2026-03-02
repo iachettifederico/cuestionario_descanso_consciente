@@ -15,29 +15,42 @@ class DiaryEntriesController < ApplicationController
     @completed_days = current_user.diary_entries.where(saved: true).pluck(:day_number)
   end
 
-  def save
-    result = DiaryEntrySaveFlow.new(
-      entry: @entry,
-      day: @day,
-      save_and_next: params[:commit] == "save_and_next"
-    ).call(entry_params)
+  def save # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    save_and_next = params[:commit] == "save_and_next"
 
-    if result.success?
-      redirect_to result.redirect_path, notice: result.notice
+    if @entry.update(entry_params.merge(saved: true))
+      if save_and_next && @day < 15
+        redirect_to diary_day_path(@day + 1), notice: "Día #{@day} guardado ✓"
+      elsif @day == 15
+        redirect_to summary_path, notice: "¡Completaste los 15 días! 🎉" # rubocop:disable Rails/I18nLocaleTexts
+      else
+        redirect_to diary_day_path(@day), notice: "Día #{@day} guardado ✓"
+      end
     else
       @completed_days = current_user.diary_entries.where(saved: true).pluck(:day_number)
       render :show, status: :unprocessable_entity
     end
   end
 
-  def update_rating
-    result = DiaryEntryRatingUpdate.new(
-      entry: @entry,
-      tipo: params[:tipo],
-      valor: params[:valor]
-    ).call
+  def update_rating # rubocop:disable Metrics/MethodLength
+    tipo  = params[:tipo].to_s
+    valor = params[:valor].to_i
 
-    render json: result.payload, status: result.status
+    unless DiaryEntry::TIPO_LABELS.key?(tipo) && (1..5).include?(valor)
+      render json: { error: "Parámetros inválidos" }, status: :unprocessable_entity
+      return
+    end
+
+    unless @entry.tipos_disponibles.include?(tipo)
+      render json: { error: "Tipo no disponible para este día" }, status: :unprocessable_entity
+      return
+    end
+
+    if @entry.update_rating(tipo, valor)
+      render json: { ok: true }
+    else
+      render json: { error: "No se pudo guardar" }, status: :unprocessable_entity
+    end
   end
 
   private

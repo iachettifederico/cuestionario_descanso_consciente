@@ -2,9 +2,6 @@
 
 class User < ApplicationRecord
   has_secure_password
-  generates_token_for :password_reset, expires_in: 15.minutes do
-    password_digest.last(10)
-  end
   has_many :diary_entries, dependent: :destroy
   has_many :sessions, dependent: :destroy
 
@@ -28,11 +25,36 @@ class User < ApplicationRecord
     (1..15).find { |d| completed.exclude?(d) } || 15
   end
 
-  def fatigue_averages
-    DiarySummary.new(user: self).fatigue_averages
+  def fatigue_averages # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    entries = diary_entries.where.not(ratings: [nil, "{}"])
+    sums = Hash.new(0)
+    counts = Hash.new(0)
+
+    entries.each do |entry|
+      begin
+        ratings = JSON.parse(entry.ratings)
+      rescue JSON::ParserError
+        ratings = {}
+      end
+      ratings.each do |tipo, val|
+        next unless val.to_i.positive?
+
+        sums[tipo] += val.to_i
+        counts[tipo] += 1
+      end
+    end
+
+    averages = {}
+    sums.each do |tipo, sum|
+      averages[tipo] = (sum.to_f / counts[tipo]).round(1)
+    end
+    averages
   end
 
   def sleep_average
-    DiarySummary.new(user: self).sleep_average
+    entries = diary_entries.where.not(horas_dormidas: nil)
+    return nil if entries.empty?
+
+    (entries.sum(:horas_dormidas) / entries.count).round(1)
   end
 end

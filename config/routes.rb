@@ -1,31 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get "up" => "rails/health#show", as: :rails_health_check
-
-  constraints subdomain: "cuestionario" do
-    root to: "cuestionario#welcome", as: :cuestionario_root
-  end
-
-  constraints subdomain: "diario" do
-    root to: "diary_entries#index", as: :diario_root
-  end
-
-  # ─── CUESTIONARIO (público) ─────────────────────────────────────────
-  root to: "home#index"
-  get "cuestionario", to: "cuestionario#welcome"
-  get "cuestionario/comenzar", to: "cuestionario#show"
-  get "cuestionario/formulario", to: "cuestionario#formulario"
-  get "cuestionario/resultados", to: "cuestionario#resultados"
-  get "cuestionario/descargar", to: "cuestionario#descargar_resultados"
-
   # ─── DIARIO (autenticado) ───────────────────────────────────────────
   get    "sign_in",  to: "sessions#new", as: :sign_in
   post   "sign_in",  to: "sessions#create"
   delete "sign_out", to: "sessions#destroy",     as: :sign_out
   get    "sign_up",  to: "registrations#new",    as: :sign_up
   post   "sign_up",  to: "registrations#create"
-  resources :passwords, param: :token, only: %i[new create edit update]
 
   get   "diario",              to: "diary_entries#index",         as: :diary
   get   "diario/resumen",      to: "summaries#show",              as: :summary
@@ -33,6 +14,16 @@ Rails.application.routes.draw do
         constraints: { day: /([1-9]|1[0-5])/ }
   post  "diario/:day",         to: "diary_entries#save",          as: :save_diary_day
   patch "diario/:day/rating",  to: "diary_entries#update_rating", as: :update_rating
+
+  # ─── CUESTIONARIO (público) ─────────────────────────────────────────
+  get "up" => "rails/health#show", as: :rails_health_check
+
+  root to: redirect("/cuestionario")
+  get "cuestionario", to: "cuestionario#welcome"
+  get "cuestionario/comenzar", to: "cuestionario#show"
+  get "cuestionario/formulario", to: "cuestionario#formulario"
+  get "cuestionario/resultados", to: "cuestionario#resultados"
+  get "cuestionario/descargar", to: "cuestionario#descargar_resultados"
 
   if Rails.env.development?
     post "cuestionario/dev/fill_random", to: "cuestionario#fill_random_answers"
