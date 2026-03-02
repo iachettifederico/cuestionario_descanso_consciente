@@ -1,15 +1,22 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # ─── DIARIO (autenticado) ───────────────────────────────────────────
+  get    "sign_in",  to: "sessions#new", as: :sign_in
+  post   "sign_in",  to: "sessions#create"
+  delete "sign_out", to: "sessions#destroy",     as: :sign_out
+  get    "sign_up",  to: "registrations#new",    as: :sign_up
+  post   "sign_up",  to: "registrations#create"
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  get   "diario",              to: "diary_entries#index",         as: :diary
+  get   "diario/resumen",      to: "summaries#show",              as: :summary
+  get   "diario/:day",         to: "diary_entries#show",          as: :diary_day,
+        constraints: { day: /([1-9]|1[0-5])/ }
+  post  "diario/:day",         to: "diary_entries#save",          as: :save_diary_day
+  patch "diario/:day/rating",  to: "diary_entries#update_rating", as: :update_rating
+
+  # ─── CUESTIONARIO (público) ─────────────────────────────────────────
   get "up" => "rails/health#show", as: :rails_health_check
-
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root to: redirect("/cuestionario")
   get "cuestionario", to: "cuestionario#welcome"
@@ -18,7 +25,6 @@ Rails.application.routes.draw do
   get "cuestionario/resultados", to: "cuestionario#resultados"
   get "cuestionario/descargar", to: "cuestionario#descargar_resultados"
 
-  # Developer tools (only in development) - must come before catch-all routes
   if Rails.env.development?
     post "cuestionario/dev/fill_random", to: "cuestionario#fill_random_answers"
     post "cuestionario/dev/fill_random_current", to: "cuestionario#fill_random_current"
@@ -26,6 +32,6 @@ Rails.application.routes.draw do
     get "cuestionario/dev/show_results", to: "cuestionario#show_results_with_random"
   end
 
-  get "cuestionario/:category_id", to: "cuestionario#show", as: :cuestionario_category
+  get  "cuestionario/:category_id", to: "cuestionario#show", as: :cuestionario_category
   post "cuestionario/:category_id", to: "cuestionario#submit"
 end

@@ -1,0 +1,52 @@
+<% content_for :title, "Crear cuenta · Diario de Cansancio" %>
+
+<div class="diario-main-header">
+  <h1>Diario de <em>cansancio</em></h1>
+  <div class="sub">Micro-pausas que alivian · 15 días de autoconocimiento</div>
+</div>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Crear tu cuenta</h2>
+    <p class="auth-sub">Empezá tu diario de 15 días de forma gratuita</p>
+
+    <%= form_with model: @user, url: sign_up_path do |f| %>
+      <div class="auth-field">
+        <%= f.label :name, "Tu nombre", class: "diario-field-label" %>
+        <%= f.text_field :name, class: "diario-field-input", placeholder: "¿Cómo te llamás?" %>
+        <% if @user.errors[:name].any? %>
+          <div class="diario-field-error"><%= @user.errors[:name].first %></div>
+        <% end %>
+      </div>
+
+      <div class="auth-field">
+        <%= f.label :email_address, "Email", class: "diario-field-label" %>
+        <%= f.email_field :email_address, class: "diario-field-input", placeholder: "tu@email.com" %>
+        <% if @user.errors[:email_address].any? %>
+          <div class="diario-field-error"><%= @user.errors[:email_address].first %></div>
+        <% end %>
+      </div>
+
+      <div class="auth-field">
+        <%= f.label :password, "Contraseña", class: "diario-field-label" %>
+        <%= f.password_field :password, class: "diario-field-input", placeholder: "Mínimo 12 caracteres" %>
+        <% if @user.errors[:password].any? %>
+          <div class="diario-field-error"><%= @user.errors[:password].first %></div>
+        <% end %>
+      </div>
+
+      <div class="auth-field">
+        <%= f.label :password_confirmation, "Confirmá tu contraseña", class: "diario-field-label" %>
+        <%= f.password_field :password_confirmation, class: "diario-field-input", placeholder: "Repetí tu contraseña" %>
+      </div>
+
+      <div style="margin-top:24px">
+        <%= f.submit "Crear mi cuenta →", class: "btn btn-primary-diario", style: "width:100%" %>
+      </div>
+    <% end %>
+
+    <div class="auth-footer">
+      ¿Ya tenés cuenta? <%= link_to "Iniciá sesión", sign_in_path %>
+    </div>
+  </div>
+</div>

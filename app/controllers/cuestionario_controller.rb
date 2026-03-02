@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CuestionarioController < ApplicationController
+  allow_unauthenticated_access
+
   def welcome
   end
 

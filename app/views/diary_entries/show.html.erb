@@ -1,0 +1,195 @@
+<% content_for :title, "Día #{@day} · Diario de Cansancio" %>
+
+<%= render "shared/nav", completed_days: @completed_days, current_day: @day %>
+
+<div class="diario-main-header" style="padding-bottom:16px">
+  <h1>Diario de <em>cansancio</em></h1>
+</div>
+
+<div class="diario-card" data-controller="diary"
+     data-diary-day-value="<%= @day %>"
+     data-diary-update-rating-url-value="<%= update_rating_path(@day) %>">
+
+  <%= form_with url: save_diary_day_path(@day), method: :post, local: true do |f| %>
+    <div class="diario-card-body">
+
+      <!-- DAY HEADER -->
+      <div class="day-header">
+        <div class="day-number"><%= @day.to_s.rjust(2, "0") %></div>
+        <div class="day-info">
+          <h2>
+            <% if @day == 15 %>
+              Día 15 · Creación de hábitos
+            <% else %>
+              Día <%= @day %>
+            <% end %>
+          </h2>
+          <%= f.date_field :fecha, value: @entry.fecha,
+                style: "border:none;background:transparent;font-size:12px;color:#6b7280;font-family:'DM Sans',sans-serif;outline:none;margin-top:5px;padding:0" %>
+        </div>
+        <div class="day-badge">
+          <%= @entry.tipos_disponibles.length %> tipo<%= @entry.tipos_disponibles.length > 1 ? "s" : "" %>
+        </div>
+      </div>
+
+      <!-- TIPO NUEVO REVEAL -->
+      <% if @entry.tipo_nuevo %>
+        <% tn = DiaryEntry::TIPO_LABELS[@entry.tipo_nuevo] %>
+        <div class="tipo-reveal">
+          ✨ <strong>Hoy incorporamos el cansancio <%= tn[:label] %> <%= tn[:icon] %></strong><br>
+          <span style="color:#6b7280;font-size:13px"><%= tn[:desc] %></span>
+        </div>
+      <% end %>
+
+      <!-- MICRO-PAUSA SUGERIDA -->
+      <% pausa = @entry.pausa_sugerida %>
+      <div class="pausa-sugerida">
+        <div class="ps-icon"><%= pausa[:icon] %></div>
+        <div class="ps-body">
+          <h4>Micro-pausa sugerida del día</h4>
+          <p><%= pausa[:text] %></p>
+        </div>
+      </div>
+
+      <!-- PALABRA CENTRAL -->
+      <label class="diario-field-label">Palabra central / síntoma</label>
+      <%= f.text_field :palabra, value: @entry.palabra,
+            class: "diario-field-input",
+            placeholder: "¿Cómo te sentís hoy en una palabra?" %>
+
+      <div class="diario-divider"></div>
+
+      <!-- RATINGS -->
+      <div class="ratings-grid">
+        <% @entry.tipos_disponibles.each do |tipo| %>
+          <% info = DiaryEntry::TIPO_LABELS[tipo] %>
+          <div class="rating-block">
+            <div class="rating-label">
+              <span><%= info[:icon] %></span>
+              <%= info[:label] %>
+            </div>
+            <div class="rating-dots">
+              <% (1..5).each do |n| %>
+                <%
+                  current_val = @entry.rating_for(tipo)
+                  level = n <= 2 ? "low" : n == 3 ? "mid" : "high"
+                  selected = current_val == n
+                %>
+                <div class="rdot"
+                     data-selected="<%= selected %>"
+                     data-level="<%= selected ? level : "" %>"
+                     data-action="click->diary#setRating"
+                     data-diary-tipo-param="<%= tipo %>"
+                     data-diary-valor-param="<%= n %>">
+                  <%= n %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- TIPO MÁS ALTO (días impares con múltiples tipos, no día 15) -->
+      <% if @entry.tipos_disponibles.length > 1 && !@entry.reflexion_day? && @day != 15 %>
+        <div class="diario-divider"></div>
+        <label class="diario-field-label">Tipo más alto hoy</label>
+        <div class="tipo-chips" data-controller="chips">
+          <% @entry.tipos_disponibles.each do |tipo| %>
+            <% info = DiaryEntry::TIPO_LABELS[tipo] %>
+            <div class="tipo-chip <%= @entry.tipo_alto == tipo ? "active" : "" %>"
+                 data-action="click->chips#select">
+              <%= info[:icon] %> <%= info[:label] %>
+              <input type="radio" name="diary_entry[tipo_alto]" value="<%= tipo %>"
+                     <%= @entry.tipo_alto == tipo ? "checked" : "" %>
+                     style="display:none">
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+      <!-- SUEÑO -->
+      <div class="diario-divider"></div>
+      <p class="section-title">Registro de sueño</p>
+      <div class="sleep-grid">
+        <div class="sleep-card">
+          <label>Hora de dormir</label>
+          <%= f.time_field :hora_dormir, value: @entry.hora_dormir %>
+        </div>
+        <div class="sleep-card">
+          <label>Horas dormidas</label>
+          <%= f.number_field :horas_dormidas, value: @entry.horas_dormidas,
+                min: 0, max: 24, step: 0.5, placeholder: "7.5" %>
+        </div>
+        <div class="sleep-card sleep-span2">
+          <label>Calidad del sueño</label>
+          <%= f.select :calidad_sueno,
+                [["", ""], ["😌 Muy buena", "Muy buena"], ["🙂 Buena", "Buena"],
+                 ["😐 Regular", "Regular"], ["😔 Mala", "Mala"], ["😩 Muy mala", "Muy mala"]],
+                { :selected => @entry.calidad_sueno } %>
+        </div>
+      </div>
+
+      <!-- CAMPO PRINCIPAL: SENSACIÓN o REFLEXIÓN -->
+      <div class="diario-divider"></div>
+      <% if @entry.reflexion_day? %>
+        <p class="section-title">Reflexión del día</p>
+        <%= f.text_area :reflexion, value: @entry.reflexion,
+              class: "diario-field-textarea",
+              placeholder: "¿Qué observaste hoy en vos misma?" %>
+      <% else %>
+        <p class="section-title">Sensación de la práctica de hoy</p>
+        <%= f.text_area :sensacion, value: @entry.sensacion,
+              class: "diario-field-textarea",
+              placeholder: "¿Cómo te sentiste con la práctica de hoy?" %>
+      <% end %>
+
+      <!-- MICRO-PAUSA REGISTRADA -->
+      <% if @entry.micropausa_day? %>
+        <div class="diario-divider"></div>
+        <p class="section-title">Micro-pausa que probé</p>
+        <%= f.text_area :micropausa, value: @entry.micropausa,
+              class: "diario-field-textarea",
+              placeholder: "¿Probaste la sugerencia de hoy? ¿Cómo te fue?" %>
+      <% end %>
+
+      <!-- DÍA 15: CAMPOS ESPECIALES -->
+      <% if @day == 15 %>
+        <div class="diario-divider"></div>
+        <p class="section-title">Reflexión final</p>
+        <%= f.text_area :reflexion_final, value: @entry.reflexion_final,
+              class: "diario-field-textarea",
+              placeholder: "¿Qué aprendiste sobre tu cansancio en estos 15 días?",
+              rows: 4 %>
+
+        <div style="height:14px"></div>
+        <label class="diario-field-label">Mi micro-pausa estrella</label>
+        <%= f.text_field :pausa_estrella, value: @entry.pausa_estrella,
+              class: "diario-field-input",
+              placeholder: "¿Cuál micro-pausa fue más efectiva para vos?" %>
+
+        <div style="height:14px"></div>
+        <label class="diario-field-label">Próximo foco</label>
+        <%= f.text_field :proximo_foco, value: @entry.proximo_foco,
+              class: "diario-field-input",
+              placeholder: "¿En qué tipo de descanso querés enfocarte?" %>
+
+        <div style="height:14px"></div>
+        <label class="diario-field-label">Rutina posible</label>
+        <%= f.text_area :rutina, value: @entry.rutina,
+              class: "diario-field-textarea",
+              placeholder: "¿Qué rutina de micro-pausas podrías sostener?" %>
+      <% end %>
+
+      <!-- SAVE ROW -->
+      <div class="save-row">
+        <% if @day < 15 %>
+          <%= f.submit "Guardar y continuar →", class: "btn btn-secondary-diario",
+                name: "commit", value: "save_and_next" %>
+        <% end %>
+        <%= f.submit @day == 15 ? "Guardar día final ✨" : "Guardar",
+              class: "btn btn-primary-diario" %>
+      </div>
+
+    </div>
+  <% end %>
+</div>

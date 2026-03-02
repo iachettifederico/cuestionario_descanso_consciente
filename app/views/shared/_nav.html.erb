@@ -1,0 +1,39 @@
+<%# Locals: completed_days (array de ints), current_day (int) %>
+<div class="nav-bar">
+  <div class="nav-days">
+    <% (1..15).each do |d| %>
+      <%
+        done       = completed_days.include?(d)
+        is_current = d == current_day
+        accessible = d <= current_day || done
+        css  = "day-dot"
+        css += " completed" if done && !is_current
+        css += " active"    if is_current
+        css += " locked"    unless accessible || done
+      %>
+      <% if accessible || done %>
+        <%= link_to d, diary_day_path(d), class: css %>
+      <% else %>
+        <span class="<%= css %>"><%= d %></span>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="nav-actions">
+    <%= link_to "Resumen", summary_path, class: "btn btn-sm",
+          style: "background:#eaecf6;color:#2a2a35;border-radius:20px;font-weight:500;font-family:'DM Sans',sans-serif" %>
+  </div>
+</div>
+
+<%
+  done_count = completed_days.length
+  pct = (done_count.to_f / 15 * 100).round
+%>
+<div class="progress-wrap">
+  <div class="progress-info">
+    <span>Tu progreso</span>
+    <strong><%= done_count %> / 15 días</strong>
+  </div>
+  <div class="progress-track">
+    <div class="progress-fill" style="width:<%= pct %>%"></div>
+  </div>
+</div>

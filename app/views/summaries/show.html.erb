@@ -1,0 +1,96 @@
+<% content_for :title, "Resumen · Diario de Cansancio" %>
+
+<%= render "shared/nav", completed_days: @completed_days, current_day: current_user.next_pending_day %>
+
+<div class="diario-main-header" style="padding-bottom:16px">
+  <h1>Observación del <em>proceso</em></h1>
+  <div class="sub">Lo que descubriste en estos días</div>
+</div>
+
+<% if @completed_days.length == 15 %>
+  <div class="complete-banner">
+    🎉 ¡Completaste los 15 días! Este registro es un regalo para vos misma.
+  </div>
+<% end %>
+
+<div class="summary-grid">
+  <div class="stat-card">
+    <div class="sc-icon">📅</div>
+    <div class="sc-value"><%= @completed_days.length %></div>
+    <div class="sc-label">días completados</div>
+  </div>
+  <div class="stat-card">
+    <div class="sc-icon">😴</div>
+    <div class="sc-value"><%= @sleep_avg ? "#{@sleep_avg}h" : "–" %></div>
+    <div class="sc-label">promedio de sueño</div>
+  </div>
+</div>
+
+<div class="tipo-bars-card">
+  <h3>Tus niveles de cansancio</h3>
+  <% if @fatigue_avgs.empty? %>
+    <p style="color:#6b7280;font-size:13px;text-align:center">
+      Completá algunos días para ver tus patrones aquí.
+    </p>
+  <% else %>
+    <% @sorted_tipos.each do |tipo| %>
+      <% avg = @fatigue_avgs[tipo] || 0 %>
+      <% next if avg == 0 %>
+      <% info = DiaryEntry::TIPO_LABELS[tipo] %>
+      <% pct = (avg / 5.0 * 100).round %>
+      <% fill_cls = avg >= 4 ? "high" : avg >= 3 ? "mid" : "" %>
+      <div class="tbr">
+        <div class="tbr-top">
+          <div class="tbr-name"><%= info[:icon] %> <%= info[:label] %></div>
+          <div class="tbr-val"><%= avg %> / 5</div>
+        </div>
+        <div class="tbr-track">
+          <div class="tbr-fill <%= fill_cls %>" style="width:<%= pct %>%"></div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<% if @top_tipo && @fatigue_avgs[@top_tipo].to_f > 0 %>
+  <% top_info = DiaryEntry::TIPO_LABELS[@top_tipo] %>
+  <div style="background:#eaecf6;border-radius:14px;padding:16px 20px;margin-bottom:12px">
+    <strong style="color:#2d6a4f;font-size:15px">
+      <%= top_info[:icon] %> Tipo predominante: <%= top_info[:label] %>
+    </strong><br>
+    <span style="font-size:13px;color:#6b7280"><%= top_info[:desc] %></span>
+  </div>
+<% end %>
+
+<div class="pausa-estrella-card">
+  <h3>Mi micro-pausa estrella ✨</h3>
+  <% if @pausa_estrella.present? %>
+    <div class="ps-quote">"<%= @pausa_estrella %>"</div>
+  <% else %>
+    <div class="ps-empty">
+      Completá el día 15 para revelar tu micro-pausa estrella
+    </div>
+  <% end %>
+</div>
+
+<% if @day15&.proximo_foco.present? %>
+  <div class="diario-card diario-card-sm" style="text-align:center;margin-bottom:12px">
+    <div class="diario-card-body">
+      <p class="section-title" style="margin-bottom:6px">Próximo foco</p>
+      <p style="font-size:16px;color:#2a2a35"><%= @day15.proximo_foco %></p>
+    </div>
+  </div>
+<% end %>
+
+<% if @day15&.rutina.present? %>
+  <div class="diario-card diario-card-sm" style="margin-bottom:12px">
+    <div class="diario-card-body">
+      <p class="section-title" style="margin-bottom:8px">Rutina posible</p>
+      <p style="font-size:14px;color:#6b7280;line-height:1.7"><%= @day15.rutina %></p>
+    </div>
+  </div>
+<% end %>
+
+<div style="text-align:center;margin-top:24px">
+  <%= link_to "← Volver al diario", diary_day_path(current_user.next_pending_day), class: "btn btn-secondary-diario" %>
+</div>
