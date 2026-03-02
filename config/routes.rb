@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # ─── CUESTIONARIO (público) ─────────────────────────────────────────
   get "up" => "rails/health#show", as: :rails_health_check
 
-  root to: redirect("/cuestionario")
+  root to: "home#index"
   get "cuestionario", to: "cuestionario#welcome"
   get "cuestionario/comenzar", to: "cuestionario#show"
   get "cuestionario/formulario", to: "cuestionario#formulario"
