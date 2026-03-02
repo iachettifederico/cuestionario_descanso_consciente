@@ -183,8 +183,8 @@
       <!-- SAVE ROW -->
       <div class="save-row">
         <% if @day < 15 %>
-          <%= f.submit "Guardar y continuar →", class: "btn btn-secondary-diario",
-                name: "commit", value: "save_and_next" %>
+          <button type="submit" name="commit" value="save_and_next"
+                  class="btn btn-secondary-diario">Guardar y continuar →</button>
         <% end %>
         <%= f.submit @day == 15 ? "Guardar día final ✨" : "Guardar",
               class: "btn btn-primary-diario" %>
