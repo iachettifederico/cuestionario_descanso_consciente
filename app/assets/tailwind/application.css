@@ -443,20 +443,22 @@
   cursor: pointer !important;
 }
 .diario-btn-instrucciones {
-  background: transparent;
-  border: 1.5px solid #b0bae0;
-  color: #6b7280;
+  background: linear-gradient(135deg, #2d6a4f, #52b788);
+  border: none;
+  color: white;
   border-radius: 20px;
-  padding: 6px 16px;
-  font-size: 12px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
 }
 .diario-btn-instrucciones:hover {
-  background: #eaecf6;
-  border-color: #2d6a4f;
-  color: #2d6a4f;
+  background: linear-gradient(135deg, #235c43, #40a074);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
 }
 
 /* ─── Main header ─── */
