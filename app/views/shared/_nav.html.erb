@@ -1,15 +1,16 @@
 <%# Locals: completed_days (array de ints), current_day (int) %>
 <div class="nav-bar">
   <div class="nav-days">
+    <% furthest_day = (completed_days.max || 0) + 1 %>
     <% (1..15).each do |d| %>
       <%
         done       = completed_days.include?(d)
         is_current = d == current_day
-        accessible = d <= current_day || done
+        accessible = d <= furthest_day || done
         css  = "day-dot"
         css += " completed" if done && !is_current
         css += " active"    if is_current
-        css += " locked"    unless accessible || done
+        css += " locked"    unless accessible
       %>
       <% if accessible || done %>
         <%= link_to d, diary_day_path(d), class: css %>

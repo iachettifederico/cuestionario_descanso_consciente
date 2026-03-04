@@ -442,6 +442,22 @@
   font-size: 12px !important;
   cursor: pointer !important;
 }
+.diario-btn-instrucciones {
+  background: transparent;
+  border: 1.5px solid #b0bae0;
+  color: #6b7280;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.diario-btn-instrucciones:hover {
+  background: #eaecf6;
+  border-color: #2d6a4f;
+  color: #2d6a4f;
+}
 
 /* ─── Main header ─── */
 .diario-main-header { text-align: center; padding: 10px 0 24px; }
