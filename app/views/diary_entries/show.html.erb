@@ -2,15 +2,93 @@
 
 <%= render "shared/nav", completed_days: @completed_days, current_day: @day %>
 
-<div class="diario-main-header" style="padding-bottom:16px">
-  <h1>Diario de <em>cansancio</em></h1>
+<div class="diario-main-header" style="padding-bottom:16px" data-controller="modal">
+  <div class="flex items-center justify-between gap-4">
+    <h1>Diario de <em>cansancio</em></h1>
+    <button type="button"
+            data-action="click->modal#open"
+            class="btn btn-sm diario-btn-instrucciones">
+      ¿Cómo usar el diario?
+    </button>
+  </div>
+
+  <!-- MODAL INSTRUCCIONES -->
+  <div data-modal-target="overlay"
+       class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4"
+       data-action="click->modal#closeOnBackdrop">
+    <div class="bg-white rounded-2xl shadow-xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-8 relative">
+      <button type="button"
+              data-action="click->modal#close"
+              class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl leading-none"
+              aria-label="Cerrar">
+        &times;
+      </button>
+
+      <h2 class="text-2xl font-light mb-1" style="font-family:'Cormorant Garamond',serif">
+        Cómo usar el diario
+      </h2>
+      <p class="text-sm text-gray-500 mb-6">
+        Todo lo que necesitás saber para aprovechar estos 15 días
+      </p>
+
+      <div class="space-y-6 text-sm text-gray-700 leading-relaxed">
+        <div>
+          <h3 class="font-medium text-gray-900 mb-2">El recorrido</h3>
+          <p>
+            El diario tiene 15 días. Cada día deberías dedicarle entre 3 y 5 minutos,
+            idealmente al final de la jornada.
+          </p>
+          <p class="mt-2">
+            Los tipos de cansancio se van revelando progresivamente: el día 1 solo medís
+            el Físico; el día 3 se suma el Mental; el día 5 el Emocional… hasta llegar a
+            los 7 tipos.
+          </p>
+          <p class="mt-2">
+            Podés volver a cualquier día anterior usando los círculos de navegación en la
+            parte superior.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-medium text-gray-900 mb-2">Los ratings (1 al 5)</h3>
+          <p>Cada tipo de cansancio se evalúa del 1 al 5:</p>
+          <ul class="mt-2 space-y-1 pl-4">
+            <li><span class="font-medium">1–2</span> Bajo</li>
+            <li><span class="font-medium">3</span> Moderado</li>
+            <li><span class="font-medium">4–5</span> Alto</li>
+          </ul>
+          <p class="mt-2">No hay respuestas correctas. Solo observación honesta, sin juicio.</p>
+        </div>
+
+        <div>
+          <h3 class="font-medium text-gray-900 mb-2">Las micro-pausas</h3>
+          <p>
+            Cada día encontrás una micro-pausa sugerida para probar. Son pequeñas, de 2 a
+            5 minutos.
+          </p>
+          <p class="mt-2">
+            Al final del día escribís cómo te fue. No tiene que ser perfecto, bastará con
+            una oración.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-right">
+        <button type="button"
+                data-action="click->modal#close"
+                class="btn btn-primary-diario">
+          Entendido
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="diario-card" data-controller="diary"
      data-diary-day-value="<%= @day %>"
      data-diary-update-rating-url-value="<%= update_rating_path(@day) %>">
 
-  <%= form_with url: save_diary_day_path(@day), method: :post, local: true do |f| %>
+  <%= form_with model: @entry, url: save_diary_day_path(@day), method: :post, local: true do |f| %>
     <div class="diario-card-body">
 
       <!-- DAY HEADER -->
