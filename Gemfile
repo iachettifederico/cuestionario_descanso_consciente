@@ -16,7 +16,7 @@ gem "solid_queue", "~> 1.2.1"
 gem "sqlite3", "~> 2.7.3"
 gem "stimulus-rails", "~> 1.3.4"
 gem "tailwindcss-rails", "~> 4.3.0"
-gem "thruster", "~> 0.1.15", require: false
+gem "thruster", "~> 0.1.16", require: false
 gem "turbo-rails", "~> 2.0.16"
 gem "tzinfo-data", platforms: %i[windows jruby]
 
