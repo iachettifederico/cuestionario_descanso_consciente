@@ -112,7 +112,7 @@
 
       <!-- TIPO NUEVO REVEAL -->
       <% if @entry.tipo_nuevo %>
-        <% tn = DiaryEntry::TIPO_LABELS[@entry.tipo_nuevo] %>
+        <% tn = DiaryDayConfig.type_label(@entry.tipo_nuevo) %>
         <div class="tipo-reveal">
           ✨ <strong>Hoy incorporamos el cansancio <%= tn[:label] %> <%= tn[:icon] %></strong><br>
           <span style="color:#6b7280;font-size:13px"><%= tn[:desc] %></span>
@@ -138,13 +138,13 @@
       <div class="diario-divider"></div>
 
       <!-- RATINGS -->
-      <div class="ratings-grid">
-        <% @entry.tipos_disponibles.each do |tipo| %>
-          <% info = DiaryEntry::TIPO_LABELS[tipo] %>
-          <div class="rating-block">
-            <div class="rating-label">
-              <span><%= info[:icon] %></span>
-              <%= info[:label] %>
+        <div class="ratings-grid">
+          <% @entry.tipos_disponibles.each do |tipo| %>
+          <% info = DiaryDayConfig.type_label(tipo) %>
+            <div class="rating-block">
+              <div class="rating-label">
+                <span><%= info[:icon] %></span>
+                <%= info[:label] %>
             </div>
             <div class="rating-dots">
               <% (1..5).each do |n| %>
@@ -173,7 +173,7 @@
         <label class="diario-field-label">Tipo más alto hoy</label>
         <div class="tipo-chips" data-controller="chips">
           <% @entry.tipos_disponibles.each do |tipo| %>
-            <% info = DiaryEntry::TIPO_LABELS[tipo] %>
+            <% info = DiaryDayConfig.type_label(tipo) %>
             <div class="tipo-chip <%= @entry.tipo_alto == tipo ? "active" : "" %>"
                  data-action="click->chips#select">
               <%= info[:icon] %> <%= info[:label] %>

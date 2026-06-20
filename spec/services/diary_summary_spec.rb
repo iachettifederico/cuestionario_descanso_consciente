@@ -20,7 +20,7 @@ RSpec.describe DiarySummary do
     expect(summary.sleep_average).to be_nil
     expect(summary.top_tipo).to be_nil
     expect(summary.pausa_estrella).to be_nil
-    expect(summary.sorted_tipos).to eq(DiaryEntry::TIPO_LABELS.keys)
+    expect(summary.sorted_tipos).to eq(DiaryDayConfig.type_labels.keys)
   end
 
   it "calculates fatigue averages and ignores malformed JSON" do

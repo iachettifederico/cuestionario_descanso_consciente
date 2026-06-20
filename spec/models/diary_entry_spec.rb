@@ -73,4 +73,11 @@ RSpec.describe DiaryEntry, type: :model do
       expect(entry.pausa_sugerida).to include(:icon, :text)
     end
   end
+
+  describe "delegation to diary day config" do
+    it "uses the shared config for type labels" do
+      expect(DiaryDayConfig.type_labels).to include("fisico")
+      expect(DiaryDayConfig.type_label("fisico")).to include(label: "Físico")
+    end
+  end
 end
