@@ -30,24 +30,14 @@ class DiaryEntriesController < ApplicationController
     end
   end
 
-  def update_rating # rubocop:disable Metrics/MethodLength
-    tipo  = params[:tipo].to_s
-    valor = params[:valor].to_i
+  def update_rating
+    result = DiaryEntryRatingUpdate.new(
+      entry: @entry,
+      tipo: params[:tipo],
+      valor: params[:valor]
+    ).call
 
-    case @entry.rating_update_error(tipo, valor)
-    when :invalid_type, :invalid_value
-      render json: { error: "Parámetros inválidos" }, status: :unprocessable_entity
-      return
-    when :type_not_available
-      render json: { error: "Tipo no disponible para este día" }, status: :unprocessable_entity
-      return
-    end
-
-    if @entry.update_rating(tipo, valor)
-      render json: { ok: true }
-    else
-      render json: { error: "No se pudo guardar" }, status: :unprocessable_entity
-    end
+    render json: result.payload, status: result.status
   end
 
   private
