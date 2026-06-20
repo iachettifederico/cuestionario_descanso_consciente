@@ -1,0 +1,492 @@
+{
+  "app/channels/application_cable/connection.rb": {
+    "mtime": 1772492009.462157,
+    "ast_hash": "560548a55ba4253297cfea7856646e1c",
+    "semantic_hash": ""
+  },
+  "app/controllers/application_controller.rb": {
+    "mtime": 1772492148.1671813,
+    "ast_hash": "1af666a7711fb8393bab8ff8c11f50b5",
+    "semantic_hash": ""
+  },
+  "app/controllers/concerns/authentication.rb": {
+    "mtime": 1772492938.3815494,
+    "ast_hash": "554f16292ec2777cfe18aa54ebdc340f",
+    "semantic_hash": ""
+  },
+  "app/controllers/cuestionario_controller.rb": {
+    "mtime": 1772492945.0616128,
+    "ast_hash": "3bb1202c95f78f78f2335112972e44b2",
+    "semantic_hash": ""
+  },
+  "app/controllers/diary_entries_controller.rb": {
+    "mtime": 1772492624.3156004,
+    "ast_hash": "9398f1a677c46d22d236c76c3de36eee",
+    "semantic_hash": ""
+  },
+  "app/controllers/home_controller.rb": {
+    "mtime": 1772493405.6480155,
+    "ast_hash": "f571478cfe05cae573ff783ec924c1b3",
+    "semantic_hash": ""
+  },
+  "app/controllers/registrations_controller.rb": {
+    "mtime": 1772492607.1904416,
+    "ast_hash": "5a278ff17a0522cd0139110ced1833a9",
+    "semantic_hash": ""
+  },
+  "app/controllers/sessions_controller.rb": {
+    "mtime": 1772574657.2171566,
+    "ast_hash": "c52ce97560abd689cff586236fd2a18a",
+    "semantic_hash": ""
+  },
+  "app/controllers/summaries_controller.rb": {
+    "mtime": 1772492644.5587885,
+    "ast_hash": "76bf5e09a3f5d73e09316a8e83924e5b",
+    "semantic_hash": ""
+  },
+  "app/helpers/application_helper.rb": {
+    "mtime": 1757972685.6561778,
+    "ast_hash": "8c6b398a50acd2007f7793d8af06b4b5",
+    "semantic_hash": ""
+  },
+  "app/javascript/application.js": {
+    "mtime": 1757943458.0122511,
+    "ast_hash": "db79b6733c44e53b1f11d6a573f035c4",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/application.js": {
+    "mtime": 1757943458.01204,
+    "ast_hash": "e99511ba6b1056659bed1f0083cae290",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/chips_controller.js": {
+    "mtime": 1772492469.4811745,
+    "ast_hash": "7e987ec684fde33375f6702f9661b7a3",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/dev_tools_controller.js": {
+    "mtime": 1759790159.5850759,
+    "ast_hash": "1516dacaeb8f6d18e3036033b8b43026",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/diary_controller.js": {
+    "mtime": 1772492448.5779839,
+    "ast_hash": "226b1ae95575ff6fd173c8bb45ddb308",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/hello_controller.js": {
+    "mtime": 1757943458.0122511,
+    "ast_hash": "2db0903d9e3b79bbeecc33a188ba3655",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/index.js": {
+    "mtime": 1757943458.0117438,
+    "ast_hash": "29e068674de0465f9831b03bb40424d5",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/modal_controller.js": {
+    "mtime": 1772575255.2709873,
+    "ast_hash": "39e3551ee07d9bf1de52c2b0477acc39",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/print_controller.js": {
+    "mtime": 1759790159.585119,
+    "ast_hash": "d38c7c5dd79ec0a776a0cd4a77c0168e",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/progress_bar_controller.js": {
+    "mtime": 1759790159.5851607,
+    "ast_hash": "41d6318cd9ccdaba74bf769c6e4ce470",
+    "semantic_hash": ""
+  },
+  "app/javascript/controllers/question_navigator_controller.js": {
+    "mtime": 1759784531.4509919,
+    "ast_hash": "86800f3870e8a4e245fceca7655b36e8",
+    "semantic_hash": ""
+  },
+  "app/jobs/application_job.rb": {
+    "mtime": 1757944183.988921,
+    "ast_hash": "64aef8d787cc6d18f2a47a1559fe268a",
+    "semantic_hash": ""
+  },
+  "app/mailers/application_mailer.rb": {
+    "mtime": 1757944184.004921,
+    "ast_hash": "da79416c2396e5ec435ab8e35b922b0a",
+    "semantic_hash": ""
+  },
+  "app/models/application_record.rb": {
+    "mtime": 1757944184.0219212,
+    "ast_hash": "25b6c9a110cc573dca375b9fd609d9fb",
+    "semantic_hash": ""
+  },
+  "app/models/category.rb": {
+    "mtime": 1759158013.2278762,
+    "ast_hash": "8834b4a277a68244d8d0981b238907d3",
+    "semantic_hash": ""
+  },
+  "app/models/current.rb": {
+    "mtime": 1772492009.4609869,
+    "ast_hash": "0fe88a6730728c2e0f7e1e3b12b73509",
+    "semantic_hash": ""
+  },
+  "app/models/diary_entry.rb": {
+    "mtime": 1772492739.6856766,
+    "ast_hash": "32518e2f55d791a3b461eba8face7dcf",
+    "semantic_hash": ""
+  },
+  "app/models/question.rb": {
+    "mtime": 1759158013.2278762,
+    "ast_hash": "6c6107004795d74b7d07b1d17ff7323f",
+    "semantic_hash": ""
+  },
+  "app/models/session.rb": {
+    "mtime": 1772492009.4598098,
+    "ast_hash": "b50e86533afe1427e97fec0c41f057dc",
+    "semantic_hash": ""
+  },
+  "app/models/user.rb": {
+    "mtime": 1772492709.8803976,
+    "ast_hash": "f9cc93d95d040bb0c29701a9dff053ab",
+    "semantic_hash": ""
+  },
+  "app/views/pwa/service-worker.js": {
+    "mtime": 1757943446.2808547,
+    "ast_hash": "49b10a997a05647d532a4c887bc4b638",
+    "semantic_hash": ""
+  },
+  "bin/brakeman": {
+    "mtime": 1757943446.281692,
+    "ast_hash": "82cb3dbadc459d6bd17e925f41e1d6ae",
+    "semantic_hash": ""
+  },
+  "bin/dev": {
+    "mtime": 1757943460.0140603,
+    "ast_hash": "0bd0da5f927077e69d9527099055a62a",
+    "semantic_hash": ""
+  },
+  "bin/docker-entrypoint": {
+    "mtime": 1757943446.2849495,
+    "ast_hash": "1a563f5bfbea3903cbffac88e227386a",
+    "semantic_hash": ""
+  },
+  "bin/importmap": {
+    "mtime": 1757943455.9011636,
+    "ast_hash": "6530255436c3aa212022df35b49e67a1",
+    "semantic_hash": ""
+  },
+  "bin/jobs": {
+    "mtime": 1757943462.343079,
+    "ast_hash": "324928bc1570b292c7c5ae1762021351",
+    "semantic_hash": ""
+  },
+  "bin/kamal": {
+    "mtime": 1757943461.3630712,
+    "ast_hash": "9a7c4b24fa43213bae7a75e944d623a4",
+    "semantic_hash": ""
+  },
+  "bin/rails": {
+    "mtime": 1757943446.2825646,
+    "ast_hash": "39ebb68cb694fcb19c823a0397db68cb",
+    "semantic_hash": ""
+  },
+  "bin/rake": {
+    "mtime": 1757943446.2827597,
+    "ast_hash": "f11d7990ef3d1c932f028eff9afc6d07",
+    "semantic_hash": ""
+  },
+  "bin/rubocop": {
+    "mtime": 1757943446.28295,
+    "ast_hash": "dea4055284f60c57661846a93a14000c",
+    "semantic_hash": ""
+  },
+  "bin/setup": {
+    "mtime": 1757943446.2831984,
+    "ast_hash": "76dd45e1d4c1d16348ef6c8a16cca09a",
+    "semantic_hash": ""
+  },
+  "bin/thrust": {
+    "mtime": 1757943446.283522,
+    "ast_hash": "563b8e1528a22320a51b373c0d159717",
+    "semantic_hash": ""
+  },
+  "config/application.rb": {
+    "mtime": 1757944184.0659215,
+    "ast_hash": "eedea92eb094c82198ab4e5c660f03fb",
+    "semantic_hash": ""
+  },
+  "config/boot.rb": {
+    "mtime": 1757944184.0849216,
+    "ast_hash": "88fde9f39dbdfc34283eedab4026ffb8",
+    "semantic_hash": ""
+  },
+  "config/environment.rb": {
+    "mtime": 1757944184.1019218,
+    "ast_hash": "e5497aa2b5297eadbc433c1d0794e6b2",
+    "semantic_hash": ""
+  },
+  "config/environments/development.rb": {
+    "mtime": 1759158013.2283804,
+    "ast_hash": "659c3cfcf3d8a2160dd90653cea7a0d8",
+    "semantic_hash": ""
+  },
+  "config/environments/production.rb": {
+    "mtime": 1757944184.1859224,
+    "ast_hash": "6f7afebedb9f79e59eb5805fba282728",
+    "semantic_hash": ""
+  },
+  "config/environments/test.rb": {
+    "mtime": 1757944184.2229228,
+    "ast_hash": "17d302b0822b166102e14abb71eda411",
+    "semantic_hash": ""
+  },
+  "config/importmap.rb": {
+    "mtime": 1757944184.247923,
+    "ast_hash": "af3b09a5579765a7834e9ba13720e68f",
+    "semantic_hash": ""
+  },
+  "config/initializers/assets.rb": {
+    "mtime": 1757944184.264923,
+    "ast_hash": "5d965d2fe931fbf6195bc82ae4de3549",
+    "semantic_hash": ""
+  },
+  "config/initializers/content_security_policy.rb": {
+    "mtime": 1759790159.5854952,
+    "ast_hash": "032bf912d2da740095ac032b2f863e4c",
+    "semantic_hash": ""
+  },
+  "config/initializers/filter_parameter_logging.rb": {
+    "mtime": 1757944184.2979233,
+    "ast_hash": "417d236232d5f11997f101b2d482a763",
+    "semantic_hash": ""
+  },
+  "config/initializers/inflections.rb": {
+    "mtime": 1757944184.3199236,
+    "ast_hash": "f418d9685cef56e0f1daa32927af29bf",
+    "semantic_hash": ""
+  },
+  "config/puma.rb": {
+    "mtime": 1757944184.3409238,
+    "ast_hash": "7b8b856c240cc940948133d50bd6ed16",
+    "semantic_hash": ""
+  },
+  "config/routes.rb": {
+    "mtime": 1772493419.4831486,
+    "ast_hash": "242e13cb9a8326c2fe5843217b952c14",
+    "semantic_hash": ""
+  },
+  "db/cable_schema.rb": {
+    "mtime": 1757943462.3470793,
+    "ast_hash": "eafcac9f33d7f8158909f706c11641dd",
+    "semantic_hash": ""
+  },
+  "db/cache_schema.rb": {
+    "mtime": 1757943462.3320792,
+    "ast_hash": "01b0708b460423f8eb1d675f07db3b68",
+    "semantic_hash": ""
+  },
+  "db/migrate/20250915215050_create_categories.rb": {
+    "mtime": 1759158013.2283804,
+    "ast_hash": "9eedb8a1d82ec48e3ac6a9b49ad8c051",
+    "semantic_hash": ""
+  },
+  "db/migrate/20250915215111_create_questions.rb": {
+    "mtime": 1759158013.2289653,
+    "ast_hash": "d6db0362da36cd5995ce145525cbb194",
+    "semantic_hash": ""
+  },
+  "db/migrate/20260302225330_create_users.rb": {
+    "mtime": 1772492010.1558166,
+    "ast_hash": "fdcce803967f5439f5e07b2adb371a27",
+    "semantic_hash": ""
+  },
+  "db/migrate/20260302225331_create_sessions.rb": {
+    "mtime": 1772492010.8518236,
+    "ast_hash": "ceac2067dc7747a6456163259e47d5a2",
+    "semantic_hash": ""
+  },
+  "db/migrate/20260302225341_add_name_to_users.rb": {
+    "mtime": 1772492032.7170398,
+    "ast_hash": "36a2e959e3f6dd8e32fce079fc2e93b1",
+    "semantic_hash": ""
+  },
+  "db/migrate/20260302225342_create_diary_entries.rb": {
+    "mtime": 1772492044.1061525,
+    "ast_hash": "25b6f6b74121cc00f490ce84e6fd57c3",
+    "semantic_hash": ""
+  },
+  "db/queue_schema.rb": {
+    "mtime": 1757943462.3427553,
+    "ast_hash": "37121f2e5f9ecb933fc1babcf03043a1",
+    "semantic_hash": ""
+  },
+  "db/schema.rb": {
+    "mtime": 1772625349.169091,
+    "ast_hash": "68fec5a0d10d53d7d58fb995cca22b6f",
+    "semantic_hash": ""
+  },
+  "db/seeds.rb": {
+    "mtime": 1759158013.2289653,
+    "ast_hash": "31fa4ea22f84ca7abbf8c55ee603a058",
+    "semantic_hash": ""
+  },
+  "spec/models/user_spec.rb": {
+    "mtime": 1772492011.021825,
+    "ast_hash": "332df68491c92b0dfd9c18cad06eaeaf",
+    "semantic_hash": ""
+  },
+  "spec/rails_helper.rb": {
+    "mtime": 1757944376.8374848,
+    "ast_hash": "5b92cbcc9312f1681c1b4bd7429f1235",
+    "semantic_hash": ""
+  },
+  "spec/spec_helper.rb": {
+    "mtime": 1757944376.8694851,
+    "ast_hash": "0db921798579006e52386cdfae2fe80f",
+    "semantic_hash": ""
+  },
+  "test/application_system_test_case.rb": {
+    "mtime": 1757944184.379924,
+    "ast_hash": "b8c929c9f8c1ba2a095356db5b8f20bb",
+    "semantic_hash": ""
+  },
+  "test/mailers/previews/passwords_mailer_preview.rb": {
+    "mtime": 1772492009.463377,
+    "ast_hash": "b35be14fec83301ab348583eb46ffa56",
+    "semantic_hash": ""
+  },
+  "test/test_helper.rb": {
+    "mtime": 1757944184.398924,
+    "ast_hash": "d5f67eacdadea2c34fc602b42f386ea1",
+    "semantic_hash": ""
+  },
+  ".github/dependabot.yml": {
+    "mtime": 1757943446.2859495,
+    "ast_hash": "2058a43290cd86dbeeef21ed7de5d1df",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1757943446.2859495,
+    "ast_hash": "85d6914e03115f492bc6b17089decf9e",
+    "semantic_hash": ""
+  },
+  ".rubocop.yml": {
+    "mtime": 1757080132.3197231,
+    "ast_hash": "0da258555f1bacc9275e32e384372851",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1757945370.9963212,
+    "ast_hash": "671eae3f96bff26135e86768c1299642",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1757943446.2706738,
+    "ast_hash": "c53b9907999d92eabaf1a2004cac7cb6",
+    "semantic_hash": ""
+  },
+  "config/cable.yml": {
+    "mtime": 1757943462.3470793,
+    "ast_hash": "735a6f231692d91ac95d3ca6429f9156",
+    "semantic_hash": ""
+  },
+  "config/cache.yml": {
+    "mtime": 1759158013.2283804,
+    "ast_hash": "70ee7b79d60a12a12d2fb9862d3d8f34",
+    "semantic_hash": ""
+  },
+  "config/database.yml": {
+    "mtime": 1757943446.3839502,
+    "ast_hash": "fda6bf467aef2ca1f6da21228f1cc27f",
+    "semantic_hash": ""
+  },
+  "config/deploy.yml": {
+    "mtime": 1757943461.7850747,
+    "ast_hash": "623f90fba91252d5901bf3235c6a3d4d",
+    "semantic_hash": ""
+  },
+  "config/locales/en.yml": {
+    "mtime": 1759158013.2283804,
+    "ast_hash": "d3752f81ad84262481394ba459580c00",
+    "semantic_hash": ""
+  },
+  "config/queue.yml": {
+    "mtime": 1757943462.3410792,
+    "ast_hash": "c05f7e036b271ea1f7e24fa7dc39ba76",
+    "semantic_hash": ""
+  },
+  "config/recurring.yml": {
+    "mtime": 1757943462.3427553,
+    "ast_hash": "81bd0e6cb515d2573abbbf21b698b919",
+    "semantic_hash": ""
+  },
+  "config/storage.yml": {
+    "mtime": 1757943446.2879496,
+    "ast_hash": "e496195eff725be31c96c856982de36f",
+    "semantic_hash": ""
+  },
+  "docs/cansancios.yml": {
+    "mtime": 1759158013.2289653,
+    "ast_hash": "fae36531e0fbd75a23679ed10fa977af",
+    "semantic_hash": ""
+  },
+  "implementacion_diario.md": {
+    "mtime": 1772491783.8645718,
+    "ast_hash": "facbf703354b05432a2aa895dec57f34",
+    "semantic_hash": ""
+  },
+  "prompt.md": {
+    "mtime": 1772490819.7877452,
+    "ast_hash": "5e90468a9676b2d09fdb7b159df0aa2c",
+    "semantic_hash": ""
+  },
+  "public/400.html": {
+    "mtime": 1757943446.3855517,
+    "ast_hash": "99679afb367ec79a70522bff363016c7",
+    "semantic_hash": ""
+  },
+  "public/404.html": {
+    "mtime": 1757943446.3856714,
+    "ast_hash": "a5fd9ef8cae318af16d6bd4f90668e36",
+    "semantic_hash": ""
+  },
+  "public/406-unsupported-browser.html": {
+    "mtime": 1757943446.3858345,
+    "ast_hash": "bada3ebefe021629ee9a747691e9883d",
+    "semantic_hash": ""
+  },
+  "public/422.html": {
+    "mtime": 1757943446.3859546,
+    "ast_hash": "e7a198066c84adaa11525c3793c8eb6f",
+    "semantic_hash": ""
+  },
+  "public/500.html": {
+    "mtime": 1757943446.3861046,
+    "ast_hash": "c152eec112d6875a5f97460a636f3f7e",
+    "semantic_hash": ""
+  },
+  "public/robots.txt": {
+    "mtime": 1757943446.3864467,
+    "ast_hash": "6363df73ea6632db60772abc7d2014d1",
+    "semantic_hash": ""
+  },
+  "spec/fixtures/users.yml": {
+    "mtime": 1772492011.021825,
+    "ast_hash": "7c5d283bd365f991aa706102029c90da",
+    "semantic_hash": ""
+  },
+  "docs/Cuestionario Descanso Consciente.pdf": {
+    "mtime": 1755966180.5407312,
+    "ast_hash": "6013d24514a66f6f8a22b0cc9826e814",
+    "semantic_hash": ""
+  },
+  "public/icon.png": {
+    "mtime": 1757943446.3862238,
+    "ast_hash": "a437696465ac551d699c4171c4095dea",
+    "semantic_hash": ""
+  },
+  "public/icon.svg": {
+    "mtime": 1757943446.3863397,
+    "ast_hash": "2add52a0cba32f1b7f42233d99f8226e",
+    "semantic_hash": ""
+  }
+}
