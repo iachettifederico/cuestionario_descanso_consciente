@@ -39,6 +39,8 @@ RSpec.describe "Sessions", type: :request do
     post sign_in_path, params: { email_address: user.email_address, password: "bad-password" }
 
     expect(response).to redirect_to(sign_in_path)
+    follow_redirect!
+    expect(response.body).to include("Email o contraseña incorrectos.")
   end
 
   it "signs out" do

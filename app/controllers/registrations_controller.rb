@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RegistrationsController < ApplicationController
+  WELCOME_NOTICE = "¡Bienvenida! Tu diario de 15 días está listo para comenzar."
+
   allow_unauthenticated_access only: %i[new create]
   layout "diario"
 
@@ -12,7 +14,7 @@ class RegistrationsController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       start_new_session_for(@user)
-      redirect_to diary_path, notice: "¡Bienvenida! Tu diario de 15 días está listo para comenzar." # rubocop:disable Rails/I18nLocaleTexts
+      redirect_to diary_path, notice: WELCOME_NOTICE
     else
       render :new, status: :unprocessable_entity
     end
