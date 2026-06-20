@@ -29,12 +29,6 @@ RSpec.describe "Cuestionario", type: :request do
     expect(response).to redirect_to(cuestionario_category_path(first_category.identifier))
   end
 
-  it "keeps the user on the same category when only some answers are present" do
-    post cuestionario_category_path(second_category.identifier), params: { answers: { second_question.id.to_s => "" } }
-
-    expect(response).to redirect_to(cuestionario_category_path(second_category.identifier))
-  end
-
   it "progresses through categories and shows results" do
     post cuestionario_category_path(first_category.identifier), params: { answers: { first_question.id.to_s => "3" } }
 

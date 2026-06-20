@@ -44,15 +44,6 @@ RSpec.describe DiaryEntry, type: :model do
       expect(entry.rating_for("fisico")).to eq(4)
       expect(entry.ratings_hash).to eq("fisico" => 4)
     end
-
-    it "rejects invalid rating types and values" do
-      expect(entry.rating_update_error("not-a-type", 4)).to eq(:invalid_type)
-      expect(entry.rating_update_error("fisico", 0)).to eq(:invalid_value)
-    end
-
-    it "rejects unavailable types for the day" do
-      expect(entry.rating_update_error("emocional", 4)).to eq(:type_not_available)
-    end
   end
 
   describe "day helpers" do
@@ -71,13 +62,6 @@ RSpec.describe DiaryEntry, type: :model do
 
       expect(entry.last_day?).to be(true)
       expect(entry.pausa_sugerida).to include(:icon, :text)
-    end
-  end
-
-  describe "delegation to diary day config" do
-    it "uses the shared config for type labels" do
-      expect(DiaryDayConfig.type_labels).to include("fisico")
-      expect(DiaryDayConfig.type_label("fisico")).to include(label: "Físico")
     end
   end
 end

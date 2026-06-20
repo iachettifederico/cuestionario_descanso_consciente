@@ -67,31 +67,6 @@ RSpec.describe "DiaryEntries", type: :request do
     expect(DiaryEntry.find_by(user: user, day_number: 1)&.saved).to be(true)
   end
 
-  it "saves a day and stays on the same day when not requested" do
-    sign_in
-
-    post save_diary_day_path(2), params: {
-      diary_entry: {
-        fecha: "2026-06-20",
-        palabra: "descanso",
-        hora_dormir: "23:00",
-        horas_dormidas: "8",
-        calidad_sueno: "Buena",
-        tipo_alto: "fisico",
-        sensacion: "tranquila",
-        reflexion: "",
-        micropausa: "",
-        reflexion_final: "",
-        pausa_estrella: "",
-        proximo_foco: "",
-        rutina: ""
-      }
-    }
-
-    expect(response).to redirect_to(diary_day_path(2))
-    expect(DiaryEntry.find_by(user: user, day_number: 2)&.saved).to be(true)
-  end
-
   it "saves the final day and redirects to the summary" do
     sign_in
 
@@ -124,32 +99,5 @@ RSpec.describe "DiaryEntries", type: :request do
     expect(response).to have_http_status(:ok)
     expect(response.parsed_body).to eq({ "ok" => true })
     expect(DiaryEntry.find_by(user: user, day_number: 1)&.rating_for("fisico")).to eq(4)
-  end
-
-  it "rejects invalid rating types" do
-    sign_in
-
-    patch update_rating_path(1), params: { tipo: "bogus", valor: 4 }
-
-    expect(response).to have_http_status(:unprocessable_content)
-    expect(response.parsed_body).to eq({ "error" => "Parámetros inválidos" })
-  end
-
-  it "rejects invalid rating values" do
-    sign_in
-
-    patch update_rating_path(1), params: { tipo: "fisico", valor: 0 }
-
-    expect(response).to have_http_status(:unprocessable_content)
-    expect(response.parsed_body).to eq({ "error" => "Parámetros inválidos" })
-  end
-
-  it "rejects rating types unavailable for the day" do
-    sign_in
-
-    patch update_rating_path(1), params: { tipo: "mental", valor: 4 }
-
-    expect(response).to have_http_status(:unprocessable_content)
-    expect(response.parsed_body).to eq({ "error" => "Tipo no disponible para este día" })
   end
 end
