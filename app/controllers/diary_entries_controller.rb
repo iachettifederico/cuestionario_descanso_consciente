@@ -36,12 +36,11 @@ class DiaryEntriesController < ApplicationController
     tipo  = params[:tipo].to_s
     valor = params[:valor].to_i
 
-    unless DiaryEntry::TIPO_LABELS.key?(tipo) && (1..5).include?(valor)
+    case @entry.rating_update_error(tipo, valor)
+    when :invalid_type, :invalid_value
       render json: { error: "Parámetros inválidos" }, status: :unprocessable_entity
       return
-    end
-
-    unless @entry.tipos_disponibles.include?(tipo)
+    when :type_not_available
       render json: { error: "Tipo no disponible para este día" }, status: :unprocessable_entity
       return
     end

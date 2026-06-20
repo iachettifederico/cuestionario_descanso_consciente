@@ -93,7 +93,19 @@ desc: "Tu sentido de propósito necesita reconexión con lo que importa", },
     ratings_hash[tipo.to_s].to_i
   end
 
+  def rating_update_error(tipo, value)
+    normalized_tipo = tipo.to_s
+
+    return :invalid_type unless valid_rating_type?(normalized_tipo)
+    return :invalid_value unless valid_rating_value?(value)
+    return :type_not_available unless rating_type_available?(normalized_tipo)
+
+    nil
+  end
+
   def update_rating(tipo, value)
+    return false if rating_update_error(tipo, value)
+
     current = ratings_hash
     current[tipo.to_s] = value.to_i
     update(ratings: current.to_json)
@@ -119,5 +131,19 @@ desc: "Tu sentido de propósito necesita reconexión con lo que importa", },
 
   def pausa_sugerida
     PAUSAS_SUGERIDAS[day_number]
+  end
+
+  private
+
+  def valid_rating_type?(tipo)
+    TIPO_LABELS.key?(tipo)
+  end
+
+  def valid_rating_value?(value)
+    (1..5).include?(value.to_i)
+  end
+
+  def rating_type_available?(tipo)
+    tipos_disponibles.include?(tipo)
   end
 end
