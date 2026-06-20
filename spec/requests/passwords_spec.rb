@@ -25,6 +25,12 @@ RSpec.describe "Passwords", type: :request do
     expect(response).to redirect_to(sign_in_path)
   end
 
+  it "redirects after requesting reset instructions for an unknown email" do
+    post passwords_path, params: { email_address: "missing@example.com" }
+
+    expect(response).to redirect_to(sign_in_path)
+  end
+
   it "shows the password reset edit form" do
     token = user.password_reset_token
 
@@ -55,5 +61,20 @@ RSpec.describe "Passwords", type: :request do
     }
 
     expect(response).to redirect_to(edit_password_path(token))
+  end
+
+  it "redirects invalid password reset tokens" do
+    get edit_password_path("invalid-token")
+
+    expect(response).to redirect_to(new_password_path)
+  end
+
+  it "redirects invalid password reset updates" do
+    put password_path("invalid-token"), params: {
+      password: "new-password",
+      password_confirmation: "new-password"
+    }
+
+    expect(response).to redirect_to(new_password_path)
   end
 end
