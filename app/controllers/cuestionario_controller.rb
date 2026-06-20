@@ -126,5 +126,10 @@ class CuestionarioController < ApplicationController
     @categories = flow.categories
     @category_scores = flow.category_scores
     @predominant_tiredness = flow.predominant_tiredness
+    @result_presenter = QuestionnaireResultPresenter.new(
+      categories: @categories,
+      category_scores: @category_scores,
+      predominant_tiredness: @predominant_tiredness
+    )
   end
 end
