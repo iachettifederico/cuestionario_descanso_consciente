@@ -16,7 +16,7 @@ RSpec.describe "Passwords", type: :request do
     get new_password_path
 
     expect(response).to have_http_status(:ok)
-    expect(response.body).to include("Forgot your password?")
+    expect(response.body).to include("Restablecer contraseña")
   end
 
   it "redirects after requesting reset instructions" do
@@ -37,7 +37,7 @@ RSpec.describe "Passwords", type: :request do
     get edit_password_path(token)
 
     expect(response).to have_http_status(:ok)
-    expect(response.body).to include("Update your password")
+    expect(response.body).to include("Elegí una nueva contraseña")
   end
 
   it "updates the password with a valid token" do
