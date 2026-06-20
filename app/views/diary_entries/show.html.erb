@@ -2,7 +2,7 @@
 
 <%= render "shared/nav", completed_days: @completed_days, current_day: @day %>
 
-<div class="diario-main-header" style="padding-bottom:16px" data-controller="modal">
+<div class="diario-main-header pb-4" data-controller="modal">
   <div class="flex items-center justify-between gap-4">
     <h1>Diario de <em>cansancio</em></h1>
     <button type="button"
@@ -24,7 +24,7 @@
         &times;
       </button>
 
-      <h2 class="text-2xl font-light mb-1" style="font-family:'Cormorant Garamond',serif">
+      <h2 class="mb-1 text-2xl font-light font-['Cormorant_Garamond',serif]">
         Cómo usar el diario
       </h2>
       <p class="text-sm text-gray-500 mb-6">
@@ -103,7 +103,7 @@
             <% end %>
           </h2>
           <%= f.date_field :fecha, value: @entry.fecha,
-                style: "border:none;background:transparent;font-size:12px;color:#6b7280;font-family:'DM Sans',sans-serif;outline:none;margin-top:5px;padding:0" %>
+                class: "mt-[5px] border-0 bg-transparent p-0 text-[12px] text-gray-500 font-['DM_Sans',sans-serif] outline-none" %>
         </div>
         <div class="day-badge">
           <%= @entry.tipos_disponibles.length %> tipo<%= @entry.tipos_disponibles.length > 1 ? "s" : "" %>
@@ -115,7 +115,7 @@
         <% tn = DiaryDayConfig.type_label(@entry.tipo_nuevo) %>
         <div class="tipo-reveal">
           ✨ <strong>Hoy incorporamos el cansancio <%= tn[:label] %> <%= tn[:icon] %></strong><br>
-          <span style="color:#6b7280;font-size:13px"><%= tn[:desc] %></span>
+          <span class="text-[13px] text-gray-500"><%= tn[:desc] %></span>
         </div>
       <% end %>
 
@@ -174,14 +174,14 @@
         <div class="tipo-chips" data-controller="chips">
           <% @entry.tipos_disponibles.each do |tipo| %>
             <% info = DiaryDayConfig.type_label(tipo) %>
-            <div class="tipo-chip <%= @entry.tipo_alto == tipo ? "active" : "" %>"
-                 data-action="click->chips#select">
-              <%= info[:icon] %> <%= info[:label] %>
+                <div class="tipo-chip <%= @entry.tipo_alto == tipo ? "active" : "" %>"
+                  data-action="click->chips#select">
+                <%= info[:icon] %> <%= info[:label] %>
               <input type="radio" name="diary_entry[tipo_alto]" value="<%= tipo %>"
                      <%= @entry.tipo_alto == tipo ? "checked" : "" %>
-                     style="display:none">
-            </div>
-          <% end %>
+                      class="hidden">
+              </div>
+            <% end %>
         </div>
       <% end %>
 
@@ -239,19 +239,19 @@
               placeholder: "¿Qué aprendiste sobre tu cansancio en estos 15 días?",
               rows: 4 %>
 
-        <div style="height:14px"></div>
+        <div class="h-3.5"></div>
         <label class="diario-field-label">Mi micro-pausa estrella</label>
         <%= f.text_field :pausa_estrella, value: @entry.pausa_estrella,
               class: "diario-field-input",
               placeholder: "¿Cuál micro-pausa fue más efectiva para vos?" %>
 
-        <div style="height:14px"></div>
+        <div class="h-3.5"></div>
         <label class="diario-field-label">Próximo foco</label>
         <%= f.text_field :proximo_foco, value: @entry.proximo_foco,
               class: "diario-field-input",
               placeholder: "¿En qué tipo de descanso querés enfocarte?" %>
 
-        <div style="height:14px"></div>
+        <div class="h-3.5"></div>
         <label class="diario-field-label">Rutina posible</label>
         <%= f.text_area :rutina, value: @entry.rutina,
               class: "diario-field-textarea",
