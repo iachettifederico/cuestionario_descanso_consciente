@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete "sign_out", to: "sessions#destroy",     as: :sign_out
   get    "sign_up",  to: "registrations#new",    as: :sign_up
   post   "sign_up",  to: "registrations#create"
+  resources :passwords, param: :token, only: %i[new create edit update]
 
   get   "diario",              to: "diary_entries#index",         as: :diary
   get   "diario/resumen",      to: "summaries#show",              as: :summary

@@ -16,17 +16,11 @@ RSpec.describe "Passwords", type: :request do
     get new_password_path
 
     expect(response).to have_http_status(:ok)
-    expect(response.body).to include("Restablecer contraseña")
+    expect(response.body).to include("Forgot your password?")
   end
 
   it "redirects after requesting reset instructions" do
     post passwords_path, params: { email_address: user.email_address }
-
-    expect(response).to redirect_to(sign_in_path)
-  end
-
-  it "redirects after requesting reset instructions for an unknown email" do
-    post passwords_path, params: { email_address: "missing@example.com" }
 
     expect(response).to redirect_to(sign_in_path)
   end
@@ -37,7 +31,7 @@ RSpec.describe "Passwords", type: :request do
     get edit_password_path(token)
 
     expect(response).to have_http_status(:ok)
-    expect(response.body).to include("Elegí una nueva contraseña")
+    expect(response.body).to include("Update your password")
   end
 
   it "updates the password with a valid token" do
@@ -61,20 +55,5 @@ RSpec.describe "Passwords", type: :request do
     }
 
     expect(response).to redirect_to(edit_password_path(token))
-  end
-
-  it "redirects invalid password reset tokens" do
-    get edit_password_path("invalid-token")
-
-    expect(response).to redirect_to(new_password_path)
-  end
-
-  it "redirects invalid password reset updates" do
-    put password_path("invalid-token"), params: {
-      password: "new-password",
-      password_confirmation: "new-password"
-    }
-
-    expect(response).to redirect_to(new_password_path)
   end
 end

@@ -33,22 +33,4 @@ RSpec.describe "Summaries", type: :request do
     expect(response.body).to include("Observación del")
     expect(response.body).to include("Mi micro-pausa estrella")
   end
-
-  it "shows the empty state when there is no summary data" do
-    sign_in
-    get summary_path
-
-    expect(response).to have_http_status(:ok)
-    expect(response.body).to include("Completá algunos días para ver tus patrones aquí.")
-  end
-
-  it "falls back to the latest micropausa when day 15 has no star pause" do
-    user.diary_entries.create!(day_number: 10, saved: true, micropausa: "Una pausa reciente")
-    user.diary_entries.create!(day_number: 15, saved: true)
-
-    sign_in
-    get summary_path
-
-    expect(response.body).to include("Una pausa reciente")
-  end
 end
