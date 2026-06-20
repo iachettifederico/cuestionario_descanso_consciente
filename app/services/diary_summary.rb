@@ -59,7 +59,7 @@ class DiarySummary
   end
 
   def sorted_tipos
-    @sorted_tipos ||= DiaryEntry::TIPO_LABELS.keys.sort_by { |tipo| -(fatigue_averages[tipo] || 0) }
+    @sorted_tipos ||= DiaryDayConfig.type_labels.keys.sort_by { |tipo| -(fatigue_averages[tipo] || 0) }
   end
 
   private

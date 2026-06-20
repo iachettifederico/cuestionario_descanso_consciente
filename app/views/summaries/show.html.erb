@@ -32,11 +32,11 @@
     <p style="color:#6b7280;font-size:13px;text-align:center">
       Completá algunos días para ver tus patrones aquí.
     </p>
-  <% else %>
+      <% else %>
     <% @sorted_tipos.each do |tipo| %>
       <% avg = @fatigue_avgs[tipo] || 0 %>
       <% next if avg == 0 %>
-      <% info = DiaryEntry::TIPO_LABELS[tipo] %>
+      <% info = DiaryDayConfig.type_label(tipo) %>
       <% pct = (avg / 5.0 * 100).round %>
       <% fill_cls = avg >= 4 ? "high" : avg >= 3 ? "mid" : "" %>
       <div class="tbr">
@@ -53,7 +53,7 @@
 </div>
 
 <% if @top_tipo && @fatigue_avgs[@top_tipo].to_f > 0 %>
-  <% top_info = DiaryEntry::TIPO_LABELS[@top_tipo] %>
+  <% top_info = DiaryDayConfig.type_label(@top_tipo) %>
   <div style="background:#eaecf6;border-radius:14px;padding:16px 20px;margin-bottom:12px">
     <strong style="color:#2d6a4f;font-size:15px">
       <%= top_info[:icon] %> Tipo predominante: <%= top_info[:label] %>
