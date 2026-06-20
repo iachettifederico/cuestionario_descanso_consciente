@@ -2,6 +2,13 @@
 
 plugins:
 - rubocop-rails
+- rubocop-erb
+
+require:
+- ./lib/rubocop/cop/domain/no_public_attribute_readers
+- ./lib/rubocop/cop/rails/helper_method_after_definition
+- ./lib/rubocop/cop/rails/no_helper_method
+- ./lib/rubocop/cop/rails/no_helper_methods_in_view_modules
 
 AllCops:
   NewCops: enable
@@ -10,6 +17,8 @@ AllCops:
   Exclude:
   - ".git/**/*"
   - bin/**/*
+  - ".bundle/**/*"
+  - "vendor/**/*"
   - tmp/**/*
   - db/**/*.rb
 
@@ -49,6 +58,21 @@ Rails/Output:
   - app/views/**/*.rb
   - app/components/**/*.rb
 
+Rails/HelperInstanceVariable:
+  Include:
+  - app/helpers/**/*.rb
+  - app/views/**/*.erb
+
+Rails/NoHelperMethod:
+  Enabled: true
+  Include:
+    - app/controllers/**/*.rb
+
+Rails/NoHelperMethodsInViewModules:
+  Enabled: true
+  Include:
+    - app/helpers/**/*.rb
+
 Rails/RakeEnvironment:
   Enabled: false
 
@@ -72,7 +96,7 @@ Style/EmptyMethod:
 
 Style/FrozenStringLiteralComment:
   Enabled: true
-  SafeAutoCorrect: true
+  EnforcedStyle: never
 
 Style/HashSyntax:
   EnforcedShorthandSyntax: never
@@ -99,3 +123,13 @@ Style/TrailingCommaInHashLiteral:
 
 Style/TrivialAccessors:
   Enabled: false
+
+Rails/HelperMethodAfterDefinition:
+  Enabled: true
+  Include:
+    - app/controllers/**/*.rb
+
+Domain/NoPublicAttributeReaders:
+  Enabled: true
+  Include:
+  - app/domain/**/*.rb
