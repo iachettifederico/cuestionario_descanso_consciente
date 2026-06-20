@@ -8,7 +8,3 @@ server:
 .PHONY: console
 console:
 	$(RAILS) console
-
-.PHONY: tailwind
-tailwind:
-	$(RAILS) tailwindcss:watch
