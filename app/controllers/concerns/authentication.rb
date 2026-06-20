@@ -25,7 +25,14 @@ module Authentication
   end
 
   def resume_session
-    Current.session ||= find_session_by_cookie
+    return Current.session if Current.session
+
+    session_id = cookies.signed[:session_id]
+    Current.session = Session.find_by(id: session_id) if session_id.present?
+
+    cookies.delete(:session_id) if session_id.present? && Current.session.nil?
+
+    Current.session
   end
 
   def find_session_by_cookie
@@ -49,7 +56,8 @@ module Authentication
   end
 
   def terminate_session
-    Current.session.destroy
+    Current.session&.destroy
+    Current.session = nil
     cookies.delete(:session_id)
   end
 end
