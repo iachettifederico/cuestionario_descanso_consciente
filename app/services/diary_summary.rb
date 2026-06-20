@@ -11,9 +11,21 @@ class DiarySummary
     @completed_days ||= diary_entries.where(saved: true).pluck(:day_number)
   end
 
-  def fatigue_averages
+  def fatigue_averages # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
     @fatigue_averages ||= begin
-      sums, counts = fatigue_totals_and_counts
+      entries = diary_entries.where.not(ratings: [nil, "{}"])
+      sums = Hash.new(0)
+      counts = Hash.new(0)
+
+      entries.each do |entry|
+        ratings = parse_ratings(entry.ratings)
+        ratings.each do |tipo, val|
+          next unless val.to_i.positive?
+
+          sums[tipo] += val.to_i
+          counts[tipo] += 1
+        end
+      end
 
       sums.each_with_object({}) do |(tipo, sum), averages|
         averages[tipo] = (sum.to_f / counts[tipo]).round(1)
@@ -47,35 +59,13 @@ class DiarySummary
   end
 
   def sorted_tipos
-    @sorted_tipos ||= DiaryDayConfig.type_labels.keys.sort_by { |tipo| -(fatigue_averages[tipo] || 0) }
+    @sorted_tipos ||= DiaryEntry::TIPO_LABELS.keys.sort_by { |tipo| -(fatigue_averages[tipo] || 0) }
   end
 
   private
 
   def diary_entries
     user.diary_entries
-  end
-
-  def fatigue_totals_and_counts
-    @fatigue_totals_and_counts ||= begin
-      sums = Hash.new(0)
-      counts = Hash.new(0)
-
-      fatigue_entries.each do |entry|
-        parse_ratings(entry.ratings).each do |tipo, value|
-          next unless value.to_i.positive?
-
-          sums[tipo] += value.to_i
-          counts[tipo] += 1
-        end
-      end
-
-      [sums, counts]
-    end
-  end
-
-  def fatigue_entries
-    @fatigue_entries ||= diary_entries.where.not(ratings: [nil, "{}"])
   end
 
   def parse_ratings(ratings_json)
