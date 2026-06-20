@@ -15,17 +15,15 @@ class DiaryEntriesController < ApplicationController
     @completed_days = current_user.diary_entries.where(saved: true).pluck(:day_number)
   end
 
-  def save # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
-    save_and_next = params[:commit] == "save_and_next"
+  def save
+    result = DiaryEntrySaveFlow.new(
+      entry: @entry,
+      day: @day,
+      save_and_next: params[:commit] == "save_and_next"
+    ).call(entry_params)
 
-    if @entry.update(entry_params.merge(saved: true))
-      if save_and_next && @day < 15
-        redirect_to diary_day_path(@day + 1), notice: "Día #{@day} guardado ✓"
-      elsif @day == 15
-        redirect_to summary_path, notice: "¡Completaste los 15 días! 🎉" # rubocop:disable Rails/I18nLocaleTexts
-      else
-        redirect_to diary_day_path(@day), notice: "Día #{@day} guardado ✓"
-      end
+    if result.success?
+      redirect_to result.redirect_path, notice: result.notice
     else
       @completed_days = current_user.diary_entries.where(saved: true).pluck(:day_number)
       render :show, status: :unprocessable_entity
