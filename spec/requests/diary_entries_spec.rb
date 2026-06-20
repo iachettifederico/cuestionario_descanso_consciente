@@ -100,4 +100,31 @@ RSpec.describe "DiaryEntries", type: :request do
     expect(response.parsed_body).to eq({ "ok" => true })
     expect(DiaryEntry.find_by(user: user, day_number: 1)&.rating_for("fisico")).to eq(4)
   end
+
+  it "rejects invalid rating types" do
+    sign_in
+
+    patch update_rating_path(1), params: { tipo: "bogus", valor: 4 }
+
+    expect(response).to have_http_status(:unprocessable_content)
+    expect(response.parsed_body).to eq({ "error" => "Parámetros inválidos" })
+  end
+
+  it "rejects invalid rating values" do
+    sign_in
+
+    patch update_rating_path(1), params: { tipo: "fisico", valor: 0 }
+
+    expect(response).to have_http_status(:unprocessable_content)
+    expect(response.parsed_body).to eq({ "error" => "Parámetros inválidos" })
+  end
+
+  it "rejects rating types unavailable for the day" do
+    sign_in
+
+    patch update_rating_path(1), params: { tipo: "mental", valor: 4 }
+
+    expect(response).to have_http_status(:unprocessable_content)
+    expect(response.parsed_body).to eq({ "error" => "Tipo no disponible para este día" })
+  end
 end
