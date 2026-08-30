@@ -1,0 +1,40 @@
+<% content_for :title, "Iniciar sesión · Diario de Cansancio" %>
+
+<div class="diario-main-header">
+  <h1>Diario de <em>cansancio</em></h1>
+  <div class="sub">Micro-pausas que alivian · 15 días de autoconocimiento</div>
+</div>
+
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Bienvenida de vuelta</h2>
+    <p class="auth-sub">Tu diario te está esperando</p>
+
+    <%= form_with url: sign_in_path do |f| %>
+      <div class="auth-field">
+        <%= f.label :email_address, "Email", class: "diario-field-label" %>
+        <%= f.email_field :email_address, class: "diario-field-input",
+              placeholder: "tu@email.com", autocomplete: "email" %>
+      </div>
+
+      <div class="auth-field">
+        <%= f.label :password, "Contraseña", class: "diario-field-label" %>
+        <%= f.password_field :password, class: "diario-field-input",
+              placeholder: "Tu contraseña", autocomplete: "current-password" %>
+      </div>
+
+      <div class="mt-4 mb-6 flex items-center">
+        <label class="flex cursor-pointer items-center gap-2 text-sm text-gray-500">
+          <%= f.check_box :remember_me, class: "accent-[#2d6a4f]" %>
+          Recordarme
+        </label>
+      </div>
+
+      <%= f.submit "Ingresar →", class: "btn btn-primary-diario w-full" %>
+    <% end %>
+
+    <div class="auth-footer">
+      ¿No tenés cuenta? <%= link_to "Registrate", sign_up_path %>
+    </div>
+  </div>
+</div>

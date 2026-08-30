@@ -1,0 +1,17 @@
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Restablecer contraseña</h2>
+    <p class="auth-sub">Te enviamos un enlace si la cuenta existe</p>
+
+    <%= render "shared/diario_flash" %>
+
+    <%= form_with url: passwords_path do |form| %>
+      <div class="auth-field">
+        <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username",
+              placeholder: "tu@email.com", value: params[:email_address], class: "diario-field-input" %>
+      </div>
+
+      <%= form.submit "Enviar instrucciones", class: "btn btn-primary-diario w-full" %>
+    <% end %>
+  </div>
+</div>

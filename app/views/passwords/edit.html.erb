@@ -1,0 +1,22 @@
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h2>Elegí una nueva contraseña</h2>
+    <p class="auth-sub">Usá una contraseña que puedas recordar con facilidad</p>
+
+    <%= render "shared/diario_flash" %>
+
+    <%= form_with url: password_path(params[:token]), method: :put do |form| %>
+      <div class="auth-field">
+        <%= form.password_field :password, required: true, autocomplete: "new-password",
+              placeholder: "Nueva contraseña", maxlength: 72, class: "diario-field-input" %>
+      </div>
+
+      <div class="auth-field">
+        <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password",
+              placeholder: "Repetí la nueva contraseña", maxlength: 72, class: "diario-field-input" %>
+      </div>
+
+      <%= form.submit "Guardar cambios", class: "btn btn-primary-diario w-full" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,3928 @@
+{
+  "nodes": [
+    {
+      "id": "application_cable_connection",
+      "label": "connection.rb",
+      "file_type": "code",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "application_cable_connection_connection",
+      "label": "Connection",
+      "file_type": "code",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "application_cable_connection_connection_connect",
+      "label": ".connect()",
+      "file_type": "code",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "application_cable_connection_connection_set_current_user",
+      "label": ".set_current_user()",
+      "file_type": "code",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_application_controller",
+      "label": "application_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/application_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_application_controller_applicationcontroller",
+      "label": "ApplicationController",
+      "file_type": "code",
+      "source_file": "app/controllers/application_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_application_controller_applicationcontroller_current_user",
+      "label": ".current_user()",
+      "file_type": "code",
+      "source_file": "app/controllers/application_controller.rb",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication",
+      "label": "authentication.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_allow_unauthenticated_access",
+      "label": "allow_unauthenticated_access()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_authenticated",
+      "label": "authenticated?()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_require_authentication",
+      "label": "require_authentication()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_resume_session",
+      "label": "resume_session()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_find_session_by_cookie",
+      "label": "find_session_by_cookie()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_request_authentication",
+      "label": "request_authentication()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_after_authentication_url",
+      "label": "after_authentication_url()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_start_new_session_for",
+      "label": "start_new_session_for()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L44",
+      "_origin": "ast"
+    },
+    {
+      "id": "concerns_authentication_terminate_session",
+      "label": "terminate_session()",
+      "file_type": "code",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L51",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller",
+      "label": "cuestionario_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller",
+      "label": "CuestionarioController",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_welcome",
+      "label": ".welcome()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_show",
+      "label": ".show()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_submit",
+      "label": ".submit()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_formulario",
+      "label": ".formulario()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_resultados",
+      "label": ".resultados()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_descargar_resultados",
+      "label": ".descargar_resultados()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_fill_random_answers",
+      "label": ".fill_random_answers()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L48",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_fill_random_current",
+      "label": ".fill_random_current()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L60",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_clear_session",
+      "label": ".clear_session()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L88",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_show_results_with_random",
+      "label": ".show_results_with_random()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_find_category",
+      "label": ".find_category()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L110",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_find_previous_category",
+      "label": ".find_previous_category()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L118",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_find_next_category",
+      "label": ".find_next_category()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L127",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_all_questions_answered",
+      "label": ".all_questions_answered?()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L133",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_calculate_category_scores",
+      "label": ".calculate_category_scores()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L141",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_redirect_with_error",
+      "label": ".redirect_with_error()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L151",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_store_answers",
+      "label": ".store_answers()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L156",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_redirect_to_next_category",
+      "label": ".redirect_to_next_category()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L162",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_cuestionario_controller_cuestionariocontroller_find_predominant_tiredness",
+      "label": ".find_predominant_tiredness()",
+      "file_type": "code",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L172",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller",
+      "label": "diary_entries_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller",
+      "label": "DiaryEntriesController",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_index",
+      "label": ".index()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_show",
+      "label": ".show()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_save",
+      "label": ".save()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L18",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_update_rating",
+      "label": ".update_rating()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_set_day",
+      "label": ".set_day()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_set_entry",
+      "label": ".set_entry()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L63",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_entries_controller_diaryentriescontroller_entry_params",
+      "label": ".entry_params()",
+      "file_type": "code",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_home_controller",
+      "label": "home_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/home_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_home_controller_homecontroller",
+      "label": "HomeController",
+      "file_type": "code",
+      "source_file": "app/controllers/home_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_home_controller_homecontroller_index",
+      "label": ".index()",
+      "file_type": "code",
+      "source_file": "app/controllers/home_controller.rb",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_registrations_controller",
+      "label": "registrations_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_registrations_controller_registrationscontroller",
+      "label": "RegistrationsController",
+      "file_type": "code",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_registrations_controller_registrationscontroller_new",
+      "label": ".new()",
+      "file_type": "code",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_registrations_controller_registrationscontroller_create",
+      "label": ".create()",
+      "file_type": "code",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_registrations_controller_registrationscontroller_user_params",
+      "label": ".user_params()",
+      "file_type": "code",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_sessions_controller",
+      "label": "sessions_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_sessions_controller_sessionscontroller",
+      "label": "SessionsController",
+      "file_type": "code",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_sessions_controller_sessionscontroller_new",
+      "label": ".new()",
+      "file_type": "code",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_sessions_controller_sessionscontroller_create",
+      "label": ".create()",
+      "file_type": "code",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_sessions_controller_sessionscontroller_destroy",
+      "label": ".destroy()",
+      "file_type": "code",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_summaries_controller",
+      "label": "summaries_controller.rb",
+      "file_type": "code",
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_summaries_controller_summariescontroller",
+      "label": "SummariesController",
+      "file_type": "code",
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_summaries_controller_summariescontroller_show",
+      "label": ".show()",
+      "file_type": "code",
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "helpers_application_helper",
+      "label": "application_helper.rb",
+      "file_type": "code",
+      "source_file": "app/helpers/application_helper.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "javascript_application",
+      "label": "application.js",
+      "file_type": "code",
+      "source_file": "app/javascript/application.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_application",
+      "label": "application.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/application.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_application_application",
+      "label": "application",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/application.js",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_chips_controller",
+      "label": "chips_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/chips_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_chips_controller_select",
+      "label": "select()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/chips_controller.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_dev_tools_controller",
+      "label": "dev_tools_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/dev_tools_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_dev_tools_controller_toggle",
+      "label": "toggle()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/dev_tools_controller.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_controller",
+      "label": "diary_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_controller_setrating",
+      "label": "setRating()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_diary_controller_updateratingui",
+      "label": "updateRatingUI()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L38",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_hello_controller",
+      "label": "hello_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/hello_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_hello_controller_connect",
+      "label": "connect()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/hello_controller.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_index",
+      "label": "index.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/index.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_modal_controller",
+      "label": "modal_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_modal_controller_open",
+      "label": "open()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_modal_controller_close",
+      "label": "close()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_modal_controller_closeonbackdrop",
+      "label": "closeOnBackdrop()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L16",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_print_controller",
+      "label": "print_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/print_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_print_controller_print",
+      "label": "print()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/print_controller.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_progress_bar_controller",
+      "label": "progress_bar_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/progress_bar_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_progress_bar_controller_connect",
+      "label": "connect()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/progress_bar_controller.js",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller",
+      "label": "question_navigator_controller.js",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller_connect",
+      "label": "connect()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller_next",
+      "label": "next()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller_previous",
+      "label": "previous()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller_updatedisplay",
+      "label": "updateDisplay()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "controllers_question_navigator_controller_answerselected",
+      "label": "answerSelected()",
+      "file_type": "code",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "jobs_application_job",
+      "label": "application_job.rb",
+      "file_type": "code",
+      "source_file": "app/jobs/application_job.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "jobs_application_job_applicationjob",
+      "label": "ApplicationJob",
+      "file_type": "code",
+      "source_file": "app/jobs/application_job.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "mailers_application_mailer",
+      "label": "application_mailer.rb",
+      "file_type": "code",
+      "source_file": "app/mailers/application_mailer.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "mailers_application_mailer_applicationmailer",
+      "label": "ApplicationMailer",
+      "file_type": "code",
+      "source_file": "app/mailers/application_mailer.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_application_record",
+      "label": "application_record.rb",
+      "file_type": "code",
+      "source_file": "app/models/application_record.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_application_record_applicationrecord",
+      "label": "ApplicationRecord",
+      "file_type": "code",
+      "source_file": "app/models/application_record.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_category",
+      "label": "category.rb",
+      "file_type": "code",
+      "source_file": "app/models/category.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_category_category",
+      "label": "Category",
+      "file_type": "code",
+      "source_file": "app/models/category.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_category_category_to_param",
+      "label": ".to_param()",
+      "file_type": "code",
+      "source_file": "app/models/category.rb",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_current",
+      "label": "current.rb",
+      "file_type": "code",
+      "source_file": "app/models/current.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_current_current",
+      "label": "Current",
+      "file_type": "code",
+      "source_file": "app/models/current.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry",
+      "label": "diary_entry.rb",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry",
+      "label": "DiaryEntry",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_tipos_disponibles",
+      "label": ".tipos_disponibles()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L82",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_ratings_hash",
+      "label": ".ratings_hash()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L86",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_rating_for",
+      "label": ".rating_for()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L92",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_update_rating",
+      "label": ".update_rating()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_tipo_nuevo",
+      "label": ".tipo_nuevo()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L102",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_reflexion_day",
+      "label": ".reflexion_day?()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L108",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_micropausa_day",
+      "label": ".micropausa_day?()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L112",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_last_day",
+      "label": ".last_day?()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L116",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_diary_entry_diaryentry_pausa_sugerida",
+      "label": ".pausa_sugerida()",
+      "file_type": "code",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L120",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_question",
+      "label": "question.rb",
+      "file_type": "code",
+      "source_file": "app/models/question.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_question_question",
+      "label": "Question",
+      "file_type": "code",
+      "source_file": "app/models/question.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_session",
+      "label": "session.rb",
+      "file_type": "code",
+      "source_file": "app/models/session.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_session_session",
+      "label": "Session",
+      "file_type": "code",
+      "source_file": "app/models/session.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user",
+      "label": "user.rb",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user",
+      "label": "User",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user_entry_for",
+      "label": ".entry_for()",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user_completed_days",
+      "label": ".completed_days()",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user_next_pending_day",
+      "label": ".next_pending_day()",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user_fatigue_averages",
+      "label": ".fatigue_averages()",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_user_sleep_average",
+      "label": ".sleep_average()",
+      "file_type": "code",
+      "source_file": "app/models/user.rb",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "pwa_service_worker",
+      "label": "service-worker.js",
+      "file_type": "code",
+      "source_file": "app/views/pwa/service-worker.js",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_application",
+      "label": "application.rb",
+      "file_type": "code",
+      "source_file": "config/application.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_application_application",
+      "label": "Application",
+      "file_type": "code",
+      "source_file": "config/application.rb",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_boot",
+      "label": "boot.rb",
+      "file_type": "code",
+      "source_file": "config/boot.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_environment",
+      "label": "environment.rb",
+      "file_type": "code",
+      "source_file": "config/environment.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "environments_development",
+      "label": "development.rb",
+      "file_type": "code",
+      "source_file": "config/environments/development.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "environments_production",
+      "label": "production.rb",
+      "file_type": "code",
+      "source_file": "config/environments/production.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "environments_test",
+      "label": "test.rb",
+      "file_type": "code",
+      "source_file": "config/environments/test.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_importmap",
+      "label": "importmap.rb",
+      "file_type": "code",
+      "source_file": "config/importmap.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "initializers_assets",
+      "label": "assets.rb",
+      "file_type": "code",
+      "source_file": "config/initializers/assets.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "initializers_content_security_policy",
+      "label": "content_security_policy.rb",
+      "file_type": "code",
+      "source_file": "config/initializers/content_security_policy.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "initializers_filter_parameter_logging",
+      "label": "filter_parameter_logging.rb",
+      "file_type": "code",
+      "source_file": "config/initializers/filter_parameter_logging.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "initializers_inflections",
+      "label": "inflections.rb",
+      "file_type": "code",
+      "source_file": "config/initializers/inflections.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_puma",
+      "label": "puma.rb",
+      "file_type": "code",
+      "source_file": "config/puma.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "config_routes",
+      "label": "routes.rb",
+      "file_type": "code",
+      "source_file": "config/routes.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "db_cable_schema",
+      "label": "cable_schema.rb",
+      "file_type": "code",
+      "source_file": "db/cable_schema.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "db_cache_schema",
+      "label": "cache_schema.rb",
+      "file_type": "code",
+      "source_file": "db/cache_schema.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215050_create_categories",
+      "label": "20250915215050_create_categories.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215050_create_categories.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215050_create_categories_createcategories",
+      "label": "CreateCategories",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215050_create_categories.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215050_create_categories_createcategories_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215050_create_categories.rb",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215111_create_questions",
+      "label": "20250915215111_create_questions.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215111_create_questions.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215111_create_questions_createquestions",
+      "label": "CreateQuestions",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215111_create_questions.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20250915215111_create_questions_createquestions_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20250915215111_create_questions.rb",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225330_create_users",
+      "label": "20260302225330_create_users.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225330_create_users.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225330_create_users_createusers",
+      "label": "CreateUsers",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225330_create_users.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225330_create_users_createusers_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225330_create_users.rb",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225331_create_sessions",
+      "label": "20260302225331_create_sessions.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225331_create_sessions.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225331_create_sessions_createsessions",
+      "label": "CreateSessions",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225331_create_sessions.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225331_create_sessions_createsessions_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225331_create_sessions.rb",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225341_add_name_to_users",
+      "label": "20260302225341_add_name_to_users.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225341_add_name_to_users.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225341_add_name_to_users_addnametousers",
+      "label": "AddNameToUsers",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225341_add_name_to_users.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225341_add_name_to_users_addnametousers_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225341_add_name_to_users.rb",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225342_create_diary_entries",
+      "label": "20260302225342_create_diary_entries.rb",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225342_create_diary_entries.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225342_create_diary_entries_creatediaryentries",
+      "label": "CreateDiaryEntries",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225342_create_diary_entries.rb",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "migrate_20260302225342_create_diary_entries_creatediaryentries_change",
+      "label": ".change()",
+      "file_type": "code",
+      "source_file": "db/migrate/20260302225342_create_diary_entries.rb",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "db_queue_schema",
+      "label": "queue_schema.rb",
+      "file_type": "code",
+      "source_file": "db/queue_schema.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "db_schema",
+      "label": "schema.rb",
+      "file_type": "code",
+      "source_file": "db/schema.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "db_seeds",
+      "label": "seeds.rb",
+      "file_type": "code",
+      "source_file": "db/seeds.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "models_user_spec",
+      "label": "user_spec.rb",
+      "file_type": "code",
+      "source_file": "spec/models/user_spec.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "spec_rails_helper",
+      "label": "rails_helper.rb",
+      "file_type": "code",
+      "source_file": "spec/rails_helper.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "spec_spec_helper",
+      "label": "spec_helper.rb",
+      "file_type": "code",
+      "source_file": "spec/spec_helper.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "test_application_system_test_case",
+      "label": "application_system_test_case.rb",
+      "file_type": "code",
+      "source_file": "test/application_system_test_case.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "test_application_system_test_case_applicationsystemtestcase",
+      "label": "ApplicationSystemTestCase",
+      "file_type": "code",
+      "source_file": "test/application_system_test_case.rb",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "previews_passwords_mailer_preview",
+      "label": "passwords_mailer_preview.rb",
+      "file_type": "code",
+      "source_file": "test/mailers/previews/passwords_mailer_preview.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "previews_passwords_mailer_preview_passwordsmailerpreview",
+      "label": "PasswordsMailerPreview",
+      "file_type": "code",
+      "source_file": "test/mailers/previews/passwords_mailer_preview.rb",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "previews_passwords_mailer_preview_passwordsmailerpreview_reset",
+      "label": ".reset()",
+      "file_type": "code",
+      "source_file": "test/mailers/previews/passwords_mailer_preview.rb",
+      "source_location": "L4",
+      "_origin": "ast"
+    },
+    {
+      "id": "test_test_helper",
+      "label": "test_helper.rb",
+      "file_type": "code",
+      "source_file": "test/test_helper.rb",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "test_test_helper_testcase",
+      "label": "TestCase",
+      "file_type": "code",
+      "source_file": "test/test_helper.rb",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents",
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_agent_coding_guidelines",
+      "label": "Agent Coding Guidelines",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_commands",
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_code_style",
+      "label": "Code Style",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_context_and_collaborators",
+      "label": "Context and Collaborators",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_build_test_lint_commands",
+      "label": "Build/Test/Lint Commands",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_code_style_guidelines",
+      "label": "Code Style Guidelines",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_guiding_principles",
+      "label": "Guiding Principles",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_hotwire_stimulus_rules_important",
+      "label": "Hotwire / Stimulus Rules (Important)",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "agents_documentos",
+      "label": "Documentos",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_readme",
+      "label": "README",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario",
+      "label": "implementacion_diario.md",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_implementación_diario_de_cansancio",
+      "label": "Implementación: Diario de Cansancio",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_contexto_del_proyecto_actual",
+      "label": "Contexto del proyecto actual",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_objetivo",
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_1_generar_autenticación_de_rails_8",
+      "label": "Paso 1: Generar autenticación de Rails 8",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_2_migración_para_name_en_users",
+      "label": "Paso 2: Migración para `name` en `users`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_3_migración_para_diary_entries",
+      "label": "Paso 3: Migración para `diary_entries`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_4_modelo_user",
+      "label": "Paso 4: Modelo `User`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L96",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_5_modelo_diaryentry",
+      "label": "Paso 5: Modelo `DiaryEntry`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L168",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_6_modificar_applicationcontroller",
+      "label": "Paso 6: Modificar `ApplicationController`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L273",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_7_controladores_del_diario",
+      "label": "Paso 7: Controladores del diario",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L296",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_registrationscontroller",
+      "label": "`RegistrationsController`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L298",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_diaryentriescontroller",
+      "label": "`DiaryEntriesController`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L330",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_summariescontroller",
+      "label": "`SummariesController`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L413",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_8_rutas",
+      "label": "Paso 8: Rutas",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L443",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_9_layout_del_diario",
+      "label": "Paso 9: Layout del diario",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L492",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_10_css_del_diario",
+      "label": "Paso 10: CSS del diario",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L537",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_11_vistas_del_diario",
+      "label": "Paso 11: Vistas del diario",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L969",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_shared_diario_flash_html_erb",
+      "label": "`app/views/shared/_diario_flash.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L971",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_shared_nav_html_erb",
+      "label": "`app/views/shared/_nav.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L981",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_sessions_new_html_erb",
+      "label": "`app/views/sessions/new.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1025",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_registrations_new_html_erb",
+      "label": "`app/views/registrations/new.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1072",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_diary_entries_show_html_erb",
+      "label": "`app/views/diary_entries/show.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1129",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_views_summaries_show_html_erb",
+      "label": "`app/views/summaries/show.html.erb`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1329",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_12_stimulus_controllers",
+      "label": "Paso 12: Stimulus controllers",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1432",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_javascript_controllers_diary_controller_js",
+      "label": "`app/javascript/controllers/diary_controller.js`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1434",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_app_javascript_controllers_chips_controller_js",
+      "label": "`app/javascript/controllers/chips_controller.js`",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1493",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_paso_13_modificar_sessionscontroller_generado",
+      "label": "Paso 13: Modificar `SessionsController` generado",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1519",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_resumen_de_archivos",
+      "label": "Resumen de archivos",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1552",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_archivos_nuevos_a_crear",
+      "label": "Archivos NUEVOS a crear:",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1554",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_archivos_a_modificar_sin_romper_lo_existente",
+      "label": "Archivos a MODIFICAR (sin romper lo existente):",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1571",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_archivos_a_no_tocar",
+      "label": "Archivos a NO tocar:",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1578",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_comandos_a_ejecutar_en_orden",
+      "label": "Comandos a ejecutar en orden",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1588",
+      "_origin": "ast"
+    },
+    {
+      "id": "implementacion_diario_notas_finales_importantes",
+      "label": "Notas finales importantes",
+      "file_type": "document",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1613",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt",
+      "label": "prompt.md",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "label": "Prompt para OpenCode: Diario de Cansancio — Rails 8",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_objetivo",
+      "label": "Objetivo",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_stack_técnico",
+      "label": "Stack técnico",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_setup_inicial",
+      "label": "Setup inicial",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_modelos",
+      "label": "Modelos",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_user",
+      "label": "User",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_diaryentry",
+      "label": "DiaryEntry",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L71",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_rutas",
+      "label": "Rutas",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L184",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_controllers",
+      "label": "Controllers",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L206",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_applicationcontroller",
+      "label": "ApplicationController",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L208",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_registrationscontroller",
+      "label": "RegistrationsController",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L219",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_diaryentriescontroller",
+      "label": "DiaryEntriesController",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L223",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_summariescontroller",
+      "label": "SummariesController",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L230",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_vistas_estructura",
+      "label": "Vistas — Estructura",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L239",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_lógica_de_vistas_show_html_erb_día_del_diario",
+      "label": "Lógica de vistas — show.html.erb (día del diario)",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L254",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_stimulus_controllers",
+      "label": "Stimulus Controllers",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L274",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_diary_controller_js",
+      "label": "diary_controller.js",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L276",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_chips_controller_js",
+      "label": "chips_controller.js",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L280",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_css_variables_y_estética",
+      "label": "CSS — Variables y estética",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L285",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_layout_principal_application_html_erb",
+      "label": "Layout principal (application.html.erb)",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L326",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_partial_nav_html_erb",
+      "label": "Partial _nav.html.erb",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L349",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_vista_de_resumen_summaries_show_html_erb",
+      "label": "Vista de resumen (summaries/show.html.erb)",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L360",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_flujo_de_usuario_completo",
+      "label": "Flujo de usuario completo",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L372",
+      "_origin": "ast"
+    },
+    {
+      "id": "prompt_notas_importantes",
+      "label": "Notas importantes",
+      "file_type": "document",
+      "source_file": "prompt.md",
+      "source_location": "L385",
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "links": [
+    {
+      "source": "application_cable_connection",
+      "target": "application_cable_connection_connection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "application_cable_connection_connection",
+      "target": "application_cable_connection_connection_connect",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "application_cable_connection_connection",
+      "target": "application_cable_connection_connection_set_current_user",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_application_controller",
+      "target": "controllers_application_controller_applicationcontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/application_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_application_controller_applicationcontroller",
+      "target": "controllers_application_controller_applicationcontroller_current_user",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/application_controller.rb",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_allow_unauthenticated_access",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_authenticated",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_require_authentication",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_resume_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_find_session_by_cookie",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_request_authentication",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_after_authentication_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_start_new_session_for",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication",
+      "target": "concerns_authentication_terminate_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_welcome",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_show",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_submit",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_formulario",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_resultados",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_descargar_resultados",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_fill_random_answers",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_fill_random_current",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_clear_session",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_show_results_with_random",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_find_category",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_find_previous_category",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_find_next_category",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_all_questions_answered",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_calculate_category_scores",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_redirect_with_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_store_answers",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_redirect_to_next_category",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_find_predominant_tiredness",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller_submit",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_redirect_with_error",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller_submit",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_all_questions_answered",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_cuestionario_controller_cuestionariocontroller_submit",
+      "target": "controllers_cuestionario_controller_cuestionariocontroller_redirect_to_next_category",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/cuestionario_controller.rb",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_index",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_show",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_save",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_update_rating",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_set_day",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_set_entry",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_entry_params",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_home_controller",
+      "target": "controllers_home_controller_homecontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/home_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_home_controller_homecontroller",
+      "target": "controllers_home_controller_homecontroller_index",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/home_controller.rb",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller",
+      "target": "controllers_registrations_controller_registrationscontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller",
+      "target": "controllers_registrations_controller_registrationscontroller_new",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller",
+      "target": "controllers_registrations_controller_registrationscontroller_create",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller",
+      "target": "controllers_registrations_controller_registrationscontroller_user_params",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller_create",
+      "target": "controllers_registrations_controller_registrationscontroller_new",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_sessions_controller",
+      "target": "controllers_sessions_controller_sessionscontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_sessions_controller_sessionscontroller",
+      "target": "controllers_sessions_controller_sessionscontroller_new",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_sessions_controller_sessionscontroller",
+      "target": "controllers_sessions_controller_sessionscontroller_create",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_sessions_controller_sessionscontroller",
+      "target": "controllers_sessions_controller_sessionscontroller_destroy",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_summaries_controller",
+      "target": "controllers_summaries_controller_summariescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_summaries_controller_summariescontroller",
+      "target": "controllers_summaries_controller_summariescontroller_show",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "javascript_application",
+      "target": "turbo_rails",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/application.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "javascript_application",
+      "target": "controllers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/application.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_application",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/application.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_application",
+      "target": "controllers_application_application",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/application.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_chips_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/chips_controller.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_chips_controller",
+      "target": "controllers_chips_controller_select",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/chips_controller.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_dev_tools_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/dev_tools_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_dev_tools_controller",
+      "target": "controllers_dev_tools_controller_toggle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/dev_tools_controller.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_controller",
+      "target": "controllers_diary_controller_setrating",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_controller",
+      "target": "controllers_diary_controller_updateratingui",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_controller_setrating",
+      "target": "controllers_diary_controller_updateratingui",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/diary_controller.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_hello_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/hello_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_hello_controller",
+      "target": "controllers_hello_controller_connect",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/hello_controller.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_index",
+      "target": "application",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/index.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_index",
+      "target": "stimulus_loading",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/index.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_modal_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_modal_controller",
+      "target": "controllers_modal_controller_open",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_modal_controller",
+      "target": "controllers_modal_controller_close",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_modal_controller",
+      "target": "controllers_modal_controller_closeonbackdrop",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_modal_controller_closeonbackdrop",
+      "target": "controllers_modal_controller_close",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/modal_controller.js",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_print_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/print_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_print_controller",
+      "target": "controllers_print_controller_print",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/print_controller.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_progress_bar_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/progress_bar_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_progress_bar_controller",
+      "target": "controllers_progress_bar_controller_connect",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/progress_bar_controller.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "stimulus",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "controllers_question_navigator_controller_connect",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "controllers_question_navigator_controller_next",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "controllers_question_navigator_controller_previous",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "controllers_question_navigator_controller_updatedisplay",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller",
+      "target": "controllers_question_navigator_controller_answerselected",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller_connect",
+      "target": "controllers_question_navigator_controller_updatedisplay",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller_next",
+      "target": "controllers_question_navigator_controller_updatedisplay",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_question_navigator_controller_previous",
+      "target": "controllers_question_navigator_controller_updatedisplay",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/javascript/controllers/question_navigator_controller.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "jobs_application_job",
+      "target": "jobs_application_job_applicationjob",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/jobs/application_job.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "mailers_application_mailer",
+      "target": "mailers_application_mailer_applicationmailer",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/mailers/application_mailer.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_application_record",
+      "target": "models_application_record_applicationrecord",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/application_record.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_category",
+      "target": "models_category_category",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/category.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_category_category",
+      "target": "models_category_category_to_param",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/category.rb",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "models_current",
+      "target": "models_current_current",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/current.rb",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry",
+      "target": "models_diary_entry_diaryentry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_tipos_disponibles",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_ratings_hash",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_rating_for",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_update_rating",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_tipo_nuevo",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_reflexion_day",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_micropausa_day",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_last_day",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "models_diary_entry_diaryentry",
+      "target": "models_diary_entry_diaryentry_pausa_sugerida",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/diary_entry.rb",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "models_question",
+      "target": "models_question_question",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/question.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_session",
+      "target": "models_session_session",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/session.rb",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user",
+      "target": "models_user_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_user_user_entry_for",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_user_user_completed_days",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_user_user_next_pending_day",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_user_user_fatigue_averages",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "models_user_user",
+      "target": "models_user_user_sleep_average",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/models/user.rb",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "config_application",
+      "target": "config_application_application",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "config/application.rb",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20250915215050_create_categories",
+      "target": "migrate_20250915215050_create_categories_createcategories",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20250915215050_create_categories.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20250915215050_create_categories_createcategories",
+      "target": "migrate_20250915215050_create_categories_createcategories_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20250915215050_create_categories.rb",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20250915215111_create_questions",
+      "target": "migrate_20250915215111_create_questions_createquestions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20250915215111_create_questions.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20250915215111_create_questions_createquestions",
+      "target": "migrate_20250915215111_create_questions_createquestions_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20250915215111_create_questions.rb",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225330_create_users",
+      "target": "migrate_20260302225330_create_users_createusers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225330_create_users.rb",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225330_create_users_createusers",
+      "target": "migrate_20260302225330_create_users_createusers_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225330_create_users.rb",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225331_create_sessions",
+      "target": "migrate_20260302225331_create_sessions_createsessions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225331_create_sessions.rb",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225331_create_sessions_createsessions",
+      "target": "migrate_20260302225331_create_sessions_createsessions_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225331_create_sessions.rb",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225341_add_name_to_users",
+      "target": "migrate_20260302225341_add_name_to_users_addnametousers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225341_add_name_to_users.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225341_add_name_to_users_addnametousers",
+      "target": "migrate_20260302225341_add_name_to_users_addnametousers_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225341_add_name_to_users.rb",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225342_create_diary_entries",
+      "target": "migrate_20260302225342_create_diary_entries_creatediaryentries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225342_create_diary_entries.rb",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "migrate_20260302225342_create_diary_entries_creatediaryentries",
+      "target": "migrate_20260302225342_create_diary_entries_creatediaryentries_change",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "db/migrate/20260302225342_create_diary_entries.rb",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_application_system_test_case",
+      "target": "test_application_system_test_case_applicationsystemtestcase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/application_system_test_case.rb",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "previews_passwords_mailer_preview",
+      "target": "previews_passwords_mailer_preview_passwordsmailerpreview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/mailers/previews/passwords_mailer_preview.rb",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "previews_passwords_mailer_preview_passwordsmailerpreview",
+      "target": "previews_passwords_mailer_preview_passwordsmailerpreview_reset",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "test/mailers/previews/passwords_mailer_preview.rb",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "test_test_helper",
+      "target": "test_test_helper_testcase",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test/test_helper.rb",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "agents",
+      "target": "agents_agent_coding_guidelines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_commands",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_code_style",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_context_and_collaborators",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_build_test_lint_commands",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_code_style_guidelines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_guiding_principles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_hotwire_stimulus_rules_important",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_coding_guidelines",
+      "target": "agents_documentos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "readme",
+      "target": "readme_readme",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario",
+      "target": "implementacion_diario_implementación_diario_de_cansancio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_contexto_del_proyecto_actual",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_objetivo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_1_generar_autenticación_de_rails_8",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_2_migración_para_name_en_users",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_3_migración_para_diary_entries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_4_modelo_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_5_modelo_diaryentry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_6_modificar_applicationcontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_7_controladores_del_diario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L296",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_7_controladores_del_diario",
+      "target": "implementacion_diario_registrationscontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L298",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_7_controladores_del_diario",
+      "target": "implementacion_diario_diaryentriescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_7_controladores_del_diario",
+      "target": "implementacion_diario_summariescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L413",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_8_rutas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L443",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_9_layout_del_diario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L492",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_10_css_del_diario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L537",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_11_vistas_del_diario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L969",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_shared_diario_flash_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L971",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_shared_nav_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L981",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_sessions_new_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1025",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_registrations_new_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1072",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_diary_entries_show_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1129",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_11_vistas_del_diario",
+      "target": "implementacion_diario_app_views_summaries_show_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1329",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_12_stimulus_controllers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1432",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_12_stimulus_controllers",
+      "target": "implementacion_diario_app_javascript_controllers_diary_controller_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1434",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_paso_12_stimulus_controllers",
+      "target": "implementacion_diario_app_javascript_controllers_chips_controller_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1493",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_paso_13_modificar_sessionscontroller_generado",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1519",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_resumen_de_archivos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1552",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_resumen_de_archivos",
+      "target": "implementacion_diario_archivos_nuevos_a_crear",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1554",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_resumen_de_archivos",
+      "target": "implementacion_diario_archivos_a_modificar_sin_romper_lo_existente",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1571",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_resumen_de_archivos",
+      "target": "implementacion_diario_archivos_a_no_tocar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1578",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_comandos_a_ejecutar_en_orden",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1588",
+      "weight": 1.0
+    },
+    {
+      "source": "implementacion_diario_implementación_diario_de_cansancio",
+      "target": "implementacion_diario_notas_finales_importantes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "implementacion_diario.md",
+      "source_location": "L1613",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt",
+      "target": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_objetivo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_stack_técnico",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_setup_inicial",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_modelos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_modelos",
+      "target": "prompt_user",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_modelos",
+      "target": "prompt_diaryentry",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_rutas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_controllers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_controllers",
+      "target": "prompt_applicationcontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_controllers",
+      "target": "prompt_registrationscontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_controllers",
+      "target": "prompt_diaryentriescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L223",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_controllers",
+      "target": "prompt_summariescontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L230",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_vistas_estructura",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L239",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_lógica_de_vistas_show_html_erb_día_del_diario",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L254",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_stimulus_controllers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L274",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_stimulus_controllers",
+      "target": "prompt_diary_controller_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L276",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_stimulus_controllers",
+      "target": "prompt_chips_controller_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_css_variables_y_estética",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L285",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_layout_principal_application_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_partial_nav_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L349",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_vista_de_resumen_summaries_show_html_erb",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L360",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_flujo_de_usuario_completo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L372",
+      "weight": 1.0
+    },
+    {
+      "source": "prompt_prompt_para_opencode_diario_de_cansancio_rails_8",
+      "target": "prompt_notas_importantes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "prompt.md",
+      "source_location": "L385",
+      "weight": 1.0
+    },
+    {
+      "source": "application_cable_connection_connection_set_current_user",
+      "target": "controllers_application_controller_applicationcontroller_current_user",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/channels/application_cable/connection.rb",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication_resume_session",
+      "target": "models_session_session",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication_start_new_session_for",
+      "target": "models_session_session",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication_terminate_session",
+      "target": "controllers_sessions_controller_sessionscontroller_destroy",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "concerns_authentication_terminate_session",
+      "target": "models_session_session",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/concerns/authentication.rb",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller_index",
+      "target": "models_user_user_next_pending_day",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller_update_rating",
+      "target": "models_diary_entry_diaryentry_tipos_disponibles",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_diary_entries_controller_diaryentriescontroller_set_entry",
+      "target": "models_user_user_entry_for",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/diary_entries_controller.rb",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller_create",
+      "target": "controllers_diary_entries_controller_diaryentriescontroller_save",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_registrations_controller_registrationscontroller_create",
+      "target": "concerns_authentication_start_new_session_for",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/registrations_controller.rb",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_sessions_controller_sessionscontroller_create",
+      "target": "concerns_authentication_start_new_session_for",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/sessions_controller.rb",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_summaries_controller_summariescontroller_show",
+      "target": "models_user_user_fatigue_averages",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_summaries_controller_summariescontroller_show",
+      "target": "models_user_user_sleep_average",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "controllers_summaries_controller_summariescontroller_show",
+      "target": "models_user_user_entry_for",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/controllers/summaries_controller.rb",
+      "source_location": "L11",
+      "weight": 1.0
+    }
+  ]
+}

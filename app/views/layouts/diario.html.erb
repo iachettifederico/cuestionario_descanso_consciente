@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for(:title) { "Diario de Cansancio · Tu Pausa, Tu Esencia" } %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="diario-body">
+    <div class="diario-bg-gradient"></div>
+    <div class="app-wrap">
+      <div class="brand-bar">
+        <div class="brand-left">
+          <span>🌿</span>
+          <span class="brand-name">Tu Pausa</span>
+          <div class="brand-sep"></div>
+          <span class="brand-tagline">Tu Esencia</span>
+        </div>
+        <% if authenticated? %>
+          <div class="brand-actions">
+            <span class="brand-username">Hola, <%= current_user.name.split(" ").first %></span>
+            <%= button_to "Salir", sign_out_path, :method => :delete, class: "btn btn-sm diario-btn-salir" %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= render "shared/diario_flash" %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
