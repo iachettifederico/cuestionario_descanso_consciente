@@ -3,13 +3,13 @@
 Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
-  constraints subdomain: "cuestionario" do
-    root to: "cuestionario#welcome", as: :cuestionario_root
-  end
+  # constraints subdomain: "cuestionario" do
+  #   root to: "cuestionario#welcome", as: :cuestionario_root
+  # end
 
-  constraints subdomain: "diario" do
-    root to: "diary_entries#index", as: :diario_root
-  end
+  # constraints subdomain: "diario" do
+  #   root to: "diary_entries#index", as: :diario_root
+  # end
 
   # ─── CUESTIONARIO (público) ─────────────────────────────────────────
   root to: "home#index"
